@@ -1,0 +1,132 @@
+<html><head>
+    <meta charset="utf-8"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+          :root {
+            --primary-color: #dce8f3;
+            --text-primary: #101518;
+            --text-secondary: #5c748a;
+            --border-color: #d4dce2;
+            --background-light: #f8fafc;}
+          .form-input {
+            @apply w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[var(--border-color)] bg-[var(--background-light)] text-[var(--text-primary)] focus:border-blue-500 focus:ring-1 focus:ring-blue-500 placeholder:text-[var(--text-secondary)] p-3 text-sm font-normal leading-normal transition-colors duration-150 ease-in-out;
+          }
+          .form-label {
+            @apply text-[var(--text-primary)] text-sm font-medium leading-normal pb-1.5;
+          }
+          .form-select {
+            @apply appearance-none bg-no-repeat bg-right;
+          }
+          .btn-primary {
+            @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[var(--primary-color)] text-[var(--text-primary)] text-sm font-semibold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-colors duration-150 ease-in-out;
+          }
+          .btn-secondary {
+            @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 text-[var(--text-primary)] text-sm font-semibold leading-normal tracking-[0.015em] hover:bg-gray-300 transition-colors duration-150 ease-in-out;
+          }
+        </style>
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    </head>
+    <body class="bg-[var(--background-light)]">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2720px%27 height=%2720px%27 fill=%27rgb(92,116,138)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M215.39 92.61a8 8 0 0 0-11.32 0L128 168.69 51.94 92.61a8 8 0 0 0-11.32 11.31l80 80a8 8 0 0 0 11.32 0l80-80a8 8 0 0 0 .05-11.31Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: &quot;Plus Jakarta Sans&quot;, &quot;Noto Sans&quot;, sans-serif;">
+    <div class="layout-container flex h-full grow flex-col">
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-6 sm:px-10 py-4 bg-white shadow-sm">
+    <div class="flex items-center gap-3">
+    <div class="size-6 text-[var(--primary-color)]">
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_6_319)">
+    <path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+    </g>
+    <defs>
+    <clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+    </defs>
+    </svg>
+    </div>
+    <h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em]">Workshop Scheduler</h2>
+    </div>
+    <div class="flex items-center gap-4">
+    <nav class="hidden sm:flex items-center gap-6">
+    <a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+    <a class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-sm font-medium leading-normal transition-colors" href="#">My Workshops</a>
+    <a class="text-[var(--text-primary)] text-sm font-semibold leading-normal" href="#">Request Workshop</a>
+    </nav>
+    <button aria-label="Notifications" class="flex cursor-pointer items-center justify-center rounded-full h-9 w-9 bg-gray-100 hover:bg-gray-200 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">
+    <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+    </svg>
+    </button>
+    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border border-gray-200" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCK5hIAnsN3uQqo5swOwretWbuFZyyk3Zjnh81u1B9ydDOIhRY2cT_gzAbLQv-8PMnd2OmkwhoavbzGlmhGwLiS-oMMUNhNxzolKNW9x_07MsEx7eGOMUwqmn6fUCKH43IagN_9gXdcxRcwClEJaIJR6krwpNVtl-SnHbTYAo7whm4ZAgocB92TWALCF7wU3fXExbrb6mLMaCRVOQ5G7EnrOJ02k-hs4D5MKkV1Y0TJwPiFv3w0reCq_nd6KmCTtbRLNG_3Xycnu5MS");'></div>
+    </div>
+    </header>
+    <main class="flex flex-1 justify-center py-8 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-xl bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+    <div class="mb-6 text-center sm:text-left">
+    <h1 class="text-[var(--text-primary)] text-2xl sm:text-3xl font-bold leading-tight">Request New Workshop</h1>
+    <p class="text-[var(--text-secondary)] mt-1 text-sm">Fill in the details below to submit your workshop proposal.</p>
+    </div>
+    <form class="space-y-5">
+    <div>
+    <label class="form-label" for="topic-title">Topic Title</label>
+    <input class="form-input h-12" id="topic-title" placeholder="e.g., Introduction to Web Design" type="text" value=""/>
+    </div>
+    <div>
+    <label class="form-label" for="workshop-description">Workshop Description</label>
+    <textarea class="form-input min-h-32" id="workshop-description" placeholder="Provide a brief overview of the workshop content and objectives."></textarea>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+    <label class="form-label" for="duration">Duration</label>
+    <input class="form-input h-12 bg-gray-100 cursor-not-allowed" id="duration" readonly="" type="text" value="60 minutes"/>
+    <p class="text-xs text-[var(--text-secondary)] mt-1">Auto-filled based on selected time slot.</p>
+    </div>
+    <div>
+    <label class="form-label" for="preferred-platform">Preferred Platform</label>
+    <div class="relative">
+    <select class="form-input form-select h-12 pr-10 bg-[image:--select-button-svg]" id="preferred-platform">
+    <option value="">Select a platform</option>
+    <option value="Zoom">Zoom</option>
+    <option value="Google Meet">Google Meet</option>
+    <option value="Microsoft Teams">Microsoft Teams</option>
+    <option value="Other">Other</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <div>
+    <label class="form-label" for="slide-deck">Upload Slide Deck (Optional)</label>
+    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-[var(--border-color)] border-dashed rounded-md">
+    <div class="space-y-1 text-center">
+    <svg aria-hidden="true" class="mx-auto h-10 w-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 48 48">
+    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+    </svg>
+    <div class="flex text-sm text-gray-600">
+    <label class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500" for="file-upload">
+    <span>Upload a file</span>
+    <input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+    </label>
+    <p class="pl-1">or drag and drop</p>
+    </div>
+    <p class="text-xs text-gray-500">PDF, PPT, PPTX up to 10MB</p>
+    </div>
+    </div>
+    </div>
+    <div class="flex flex-col sm:flex-row justify-end gap-3 pt-4">
+    <button class="btn-secondary" type="button">
+                      Save as Draft
+                    </button>
+    <button class="btn-primary" type="submit">
+                      Submit for Approval
+                    </button>
+    </div>
+    </form>
+    </div>
+    </main>
+    <footer class="text-center py-6 border-t border-[var(--border-color)] mt-auto">
+    <p class="text-sm text-[var(--text-secondary)]">© 2024 Workshop Scheduler. All rights reserved.</p>
+    </footer>
+    </div>
+    </div>
+    
+    </body></html>

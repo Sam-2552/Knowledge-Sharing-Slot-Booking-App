@@ -1,0 +1,92 @@
+<html><head>
+  <meta charset="utf-8"/>
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+  <title>Stitch Design</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+        :root {
+          --primary-color: #dce8f3;
+          --secondary-color: #101518;
+          --accent-color: #5c748a;
+          --background-color: #f9fafb;--input-background: #F3F4F6;}
+      </style>
+  </head>
+  <body style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden">
+  <div class="layout-container flex h-full grow flex-col">
+  <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-4 shadow-sm">
+  <div class="flex items-center gap-3 text-[var(--secondary-color)]">
+  <div class="size-6 text-[var(--primary-color)]">
+  <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+  </svg>
+  </div>
+  <h1 class="text-[var(--secondary-color)] text-xl font-semibold leading-tight tracking-tight">Slot Booking System</h1>
+  </div>
+  </header>
+  <main class="flex flex-1 justify-center py-10 bg-[var(--background-color)]">
+  <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-2xl">
+  <h2 class="text-[var(--secondary-color)] text-3xl font-bold text-center mb-8">Welcome Back</h2>
+  <form class="space-y-6">
+  <div>
+  <label class="sr-only" for="email">Email</label>
+  <input autocomplete="email" class="form-input block w-full rounded-lg border-gray-300 bg-[var(--input-background)] focus:border-indigo-500 focus:ring-indigo-500 h-12 px-4 placeholder:text-[var(--accent-color)] text-[var(--secondary-color)] text-base" id="email" name="email" placeholder="Email Address" required="" type="email"/>
+  </div>
+  <div>
+  <label class="sr-only" for="password">Password</label>
+  <input autocomplete="current-password" class="form-input block w-full rounded-lg border-gray-300 bg-[var(--input-background)] focus:border-indigo-500 focus:ring-indigo-500 h-12 px-4 placeholder:text-[var(--accent-color)] text-[var(--secondary-color)] text-base" id="password" name="password" placeholder="Password" required="" type="password"/>
+  </div>
+  <div class="flex items-center justify-end">
+  <a class="text-sm font-medium text-[var(--accent-color)] hover:text-[var(--secondary-color)] hover:underline" href="#">
+                    Forgot password?
+                  </a>
+  </div>
+  <div>
+  <button class="flex w-full justify-center rounded-lg bg-[var(--primary-color)] hover:bg-opacity-90 py-3 px-4 text-sm font-semibold text-[var(--secondary-color)] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" type="submit">
+                    Log In
+                  </button>
+  </div>
+  </form>
+  <div class="my-6 flex items-center justify-center">
+  <div class="h-px flex-grow bg-gray-300"></div>
+  <span class="mx-4 text-sm text-[var(--accent-color)]">Or continue with</span>
+  <div class="h-px flex-grow bg-gray-300"></div>
+  </div>
+  <div>
+  <button class="flex w-full items-center justify-center gap-3 rounded-lg border border-gray-300 bg-white py-3 px-4 text-sm font-medium text-[var(--secondary-color)] shadow-sm hover:bg-gray-50" type="button">
+  <svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+  <path clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.14 6.839 9.491.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.852 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0020 10c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path>
+  </svg>
+  <span>Continue with Google</span>
+  </button>
+  </div>
+  <p class="mt-8 text-center text-sm text-[var(--accent-color)]">
+                Don't have an account?
+                <a class="font-semibold leading-6 text-[var(--primary-color)] hover:text-opacity-80 hover:underline" href="#">Sign up</a>
+  </p>
+  <div class="mt-10 pt-8 border-t border-gray-200">
+  <h3 class="text-[var(--secondary-color)] text-xl font-semibold text-center mb-6">Admin Access</h3>
+  <form class="space-y-6">
+  <div>
+  <label class="sr-only" for="role">Select Role</label>
+  <select class="form-select block w-full rounded-lg border-gray-300 bg-[var(--input-background)] focus:border-indigo-500 focus:ring-indigo-500 h-12 px-4 text-[var(--accent-color)] text-base appearance-none" id="role" name="role" style='background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 20 20%27%3e%3cpath stroke=%27%236b7280%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271.5%27 d=%27M6 8l4 4 4-4%27/%3e%3c/svg%3e"); background-position: right 0.5rem center; background-repeat: no-repeat; background-size: 1.5em 1.5em;'>
+  <option selected="">Select Role</option>
+  <option value="host">Workshop Host</option>
+  <option value="admin">System Administrator</option>
+  </select>
+  </div>
+  <div>
+  <button class="flex w-full justify-center rounded-lg bg-gray-200 hover:bg-gray-300 py-3 px-4 text-sm font-semibold text-[var(--secondary-color)] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400" type="submit">
+                      Request Admin Access
+                    </button>
+  </div>
+  </form>
+  </div>
+  </div>
+  </main>
+  </div>
+  </div>
+  
+  </body></html>
