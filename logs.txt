@@ -1,0 +1,1 @@
+Password reset link for admin@example.com: http://127.0.0.1:5000/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiZXhwIjoxNzUxMDEwMDAxfQ.lAUacEIkUxNLLOF_H01ZqCgUSPy7mNqvqUztZNKZ25g

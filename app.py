@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for, make_response, g
+from flask import Flask, render_template, request, redirect, url_for, make_response, g, flash
 import sqlite3
 import jwt
 import datetime
 from functools import wraps
+import urllib.parse
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
@@ -98,6 +99,45 @@ def signup():
         except sqlite3.IntegrityError:
             error = 'Email already registered.'
     return render_template('signup.html', error=error)
+
+@app.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    message = None
+    if request.method == 'POST':
+        email = request.form['email']
+        db = get_db()
+        user = db.execute('SELECT * FROM users WHERE email = ?', (email,)).fetchone()
+        if user:
+            token = jwt.encode({
+                'email': email,
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=15)
+            }, app.config['SECRET_KEY'], algorithm="HS256")
+            reset_url = url_for('reset_password', token=token, _external=True)
+            with open('logs.txt', 'a') as log_file:
+                log_file.write(f"Password reset link for {email}: {reset_url}\n")
+            message = 'A password reset link has been sent to your email (simulated).'
+        else:
+            message = 'If the email exists, a reset link will be sent.'
+    return render_template('forgot_password.html', message=message)
+
+@app.route('/reset-password/<token>', methods=['GET', 'POST'])
+def reset_password(token):
+    error = None
+    try:
+        data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"])
+        email = data['email']
+        print(email)
+    except Exception:
+        error = 'The reset link is invalid or has expired.'
+        return render_template('reset_password.html', error=error)
+    if request.method == 'POST':
+        password = request.form['password']
+        db = get_db()
+        db.execute('UPDATE users SET password = ? WHERE email = ?', (password, email))
+        db.commit()
+        flash('Your password has been reset. Please log in.')
+        return redirect(url_for('login'))
+    return render_template('reset_password.html', error=error)
 
 # --- Home Redirect ---
 @app.route('/')
