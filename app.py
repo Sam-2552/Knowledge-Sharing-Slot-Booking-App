@@ -55,6 +55,24 @@ def init_db():
         FOREIGN KEY (presenter_id) REFERENCES users(id),
         FOREIGN KEY (approved_by_id) REFERENCES users(id)
     )''')
+    db.execute('''CREATE TABLE IF NOT EXISTS slot_activity (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        slot_id INTEGER NOT NULL,
+        user_id INTEGER NOT NULL,
+        status TEXT NOT NULL,
+        approval_reason TEXT,
+        rejection_reason TEXT,
+        feedback TEXT,
+        comments TEXT,
+        points_awarded INTEGER,
+        topic TEXT,
+        agenda TEXT,
+        file_path TEXT,
+        created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+        updated_at TEXT DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (slot_id) REFERENCES slots(id),
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    )''')
     db.commit()
     # Insert default users if not exist
     db.execute('INSERT OR IGNORE INTO users (name, email, password, role) VALUES (?, ?, ?, ?)', ('Admin', 'admin@example.com', 'admin123', 'admin'))
@@ -102,6 +120,9 @@ def login():
 def dashboard():
     db = get_db()
     user_email = g.get('user')
+    user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
+    if user and user['role'] == 'admin':
+        return redirect(url_for('admin_dashboard'))
     user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
     # Week navigation
     all_dates = get_week_dates()  # This now returns all dates in the range
@@ -234,11 +255,110 @@ def book_slot():
     if slot and slot['status'] == 'available':
         db.execute('UPDATE slots SET topic = ?, agenda = ?, presenter_id = ?, presenter_name = ?, status = ?, file_path = ? WHERE id = ?',
                    (topic, agenda, user['id'], user['name'], 'booked', file_path, slot_id))
+        # Insert into slot_activity with topic, agenda, file_path
+        db.execute('INSERT INTO slot_activity (slot_id, user_id, status, topic, agenda, file_path) VALUES (?, ?, ?, ?, ?, ?)', (slot_id, user['id'], 'booked', topic, agenda, file_path))
         db.commit()
         return redirect(url_for('dashboard'))
     else:
         flash('Slot is no longer available.')
         return redirect(url_for('dashboard'))
+
+@app.route('/my-activity')
+@token_required
+def my_activity():
+    db = get_db()
+    user_email = g.get('user')
+    user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
+    # Get all activity for this user from slot_activity only
+    activities = db.execute('''
+        SELECT * FROM slot_activity
+        WHERE user_id = ?
+        ORDER BY created_at DESC
+    ''', (user['id'],)).fetchall()
+    return render_template('my_activity.html', user=user, activities=activities)
+
+@app.route('/admin-dashboard')
+@token_required
+def admin_dashboard():
+    db = get_db()
+    user_email = g.get('user')
+    user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
+    if user['role'] != 'admin':
+        return redirect(url_for('dashboard'))
+    # Week navigation (same as dashboard)
+    all_dates = get_week_dates()
+    all_weekdays = [d for d in all_dates if d.weekday() < 5]
+    weeks = [all_weekdays[i:i+5] for i in range(0, len(all_weekdays), 5)]
+    today = date.today()
+    current_week_index = 0
+    for idx, week in enumerate(weeks):
+        if today in week:
+            current_week_index = idx
+            break
+    week_number = request.args.get('week')
+    if week_number is not None:
+        week_number = int(week_number)
+        if week_number < 0 or week_number >= len(weeks):
+            week_number = current_week_index
+    else:
+        week_number = current_week_index
+    week_dates = weeks[week_number]
+    time_slots = get_time_slots()
+    for day in week_dates:
+        for slot_time in time_slots:
+            slot_date = day.strftime('%Y-%m-%d')
+            slot_time_str = slot_time.strftime('%H:%M')
+            exists = db.execute('SELECT 1 FROM slots WHERE date = ? AND time = ?', (slot_date, slot_time_str)).fetchone()
+            if not exists:
+                db.execute('INSERT INTO slots (date, time) VALUES (?, ?)', (slot_date, slot_time_str))
+    db.commit()
+    slots = db.execute('SELECT * FROM slots WHERE date IN ({}) ORDER BY date, time'.format(
+        ','.join(['?']*len(week_dates))), [d.strftime('%Y-%m-%d') for d in week_dates]).fetchall()
+    slots_lookup = {}
+    booked_dates = set()
+    for slot in slots:
+        slots_lookup[(slot['date'], slot['time'])] = slot
+        if slot['status'] in ('booked', 'approved'):
+            booked_dates.add(slot['date'])
+    today_str = today.strftime('%Y-%m-%d')
+    now = datetime.datetime.now()
+    now_str = now.strftime('%H:%M')
+    current_month = today.strftime('%B')
+    current_date = today.strftime('%d %b %Y')
+    current_time = now.strftime('%I:%M %p')
+    return render_template('dashboard.html', user=user, slots_lookup=slots_lookup, week_dates=week_dates, time_slots=time_slots, booked_dates=booked_dates, today_str=today_str, now_str=now_str, week_number=week_number, total_weeks=len(weeks), current_month=current_month, current_date=current_date, current_time=current_time, is_admin=True)
+
+@app.route('/admin-slot-action', methods=['POST'])
+@token_required
+def admin_slot_action():
+    db = get_db()
+    user_email = g.get('user')
+    admin = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
+    if admin['role'] != 'admin':
+        return redirect(url_for('dashboard'))
+    slot_id = request.form['slot_id']
+    action = request.form['action']
+    reason = request.form['reason']
+    slot = db.execute('SELECT * FROM slots WHERE id = ?', (slot_id,)).fetchone()
+    if not slot or slot['status'] != 'booked':
+        return redirect(url_for('admin_dashboard'))
+    # Find the slot_activity record for this slot and user
+    activity = db.execute('SELECT * FROM slot_activity WHERE slot_id = ? AND user_id = ?', (slot_id, slot['presenter_id'])).fetchone()
+    if activity is None:
+        flash('No activity record found for this slot. Cannot approve or reject.')
+        return redirect(url_for('admin_dashboard'))
+    if action == 'approve':
+        db.execute('UPDATE slots SET status = ?, approved_by_id = ?, approved_by_name = ? WHERE id = ?',
+                   ('approved', admin['id'], admin['name'], slot_id))
+        db.execute('UPDATE slot_activity SET status = ?, approval_reason = ?, feedback = NULL, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+                   ('approved', reason, activity['id']))
+    elif action == 'reject':
+        db.execute('UPDATE slots SET topic = NULL, agenda = NULL, presenter_id = NULL, presenter_name = NULL, status = ?, approved_by_id = NULL, approved_by_name = NULL, file_path = NULL WHERE id = ?',
+                   ('available', slot_id))
+        db.execute('UPDATE slot_activity SET status = ?, rejection_reason = ?, feedback = NULL, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+                   ('rejected', reason, activity['id']))
+    db.commit()
+    return redirect(url_for('admin_dashboard'))
 
 # --- Home Redirect ---
 @app.route('/')

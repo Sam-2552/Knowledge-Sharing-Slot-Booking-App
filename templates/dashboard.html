@@ -20,6 +20,16 @@
             </div>
         </div>
     </nav>
+    <div class="container mt-3">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/my-activity">My Activity</a>
+            </li>
+        </ul>
+    </div>
     <div class="container py-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
@@ -27,9 +37,9 @@
                 <div class="text-muted">Current Month: <b>{{ current_month }}</b> | Date: <b>{{ current_date }}</b> | Time: <b>{{ current_time }}</b></div>
             </div>
             <div>
-                <a href="/dashboard?week={{ week_number - 1 }}" class="btn btn-outline-primary btn-sm me-2 {% if week_number == 0 %}disabled{% endif %}">Previous Week</a>
+                <a href="{% if is_admin %}/admin-dashboard?week={{ week_number - 1 }}{% else %}/dashboard?week={{ week_number - 1 }}{% endif %}" class="btn btn-outline-primary btn-sm me-2 {% if week_number == 0 %}disabled{% endif %}">Previous Week</a>
                 <span class="fw-bold">Week {{ week_number + 1 }} of {{ total_weeks }}</span>
-                <a href="/dashboard?week={{ week_number + 1 }}" class="btn btn-outline-primary btn-sm ms-2 {% if week_number + 1 >= total_weeks %}disabled{% endif %}">Next Week</a>
+                <a href="{% if is_admin %}/admin-dashboard?week={{ week_number + 1 }}{% else %}/dashboard?week={{ week_number + 1 }}{% endif %}" class="btn btn-outline-primary btn-sm ms-2 {% if week_number + 1 >= total_weeks %}disabled{% endif %}">Next Week</a>
             </div>
         </div>
         <h4 class="mb-4">Book Your Knowledge Sharing Slot</h4>
@@ -79,9 +89,22 @@
                                         <div class="small"><a href="/{{ slot['file_path'] }}" target="_blank">View File</a></div>
                                     {% endif %}
                                     {% if slot['status'] == 'booked' %}
-                                        <span class="badge bg-warning text-dark">Pending Approval</span>
+                                        {% if is_admin %}
+                                            <form method="POST" action="/admin-slot-action">
+                                                <input type="hidden" name="slot_id" value="{{ slot['id'] }}">
+                                                <div class="mb-1">
+                                                    <textarea name="reason" class="form-control form-control-sm" placeholder="Reason (required)" required></textarea>
+                                                </div>
+                                                <div class="d-flex justify-content-center gap-1">
+                                                    <button type="submit" name="action" value="approve" class="btn btn-success btn-sm">Approve</button>
+                                                    <button type="submit" name="action" value="reject" class="btn btn-danger btn-sm">Reject</button>
+                                                </div>
+                                            </form>
+                                        {% else %}
+                                            <span class="badge bg-warning text-dark">Pending Approval</span>
+                                        {% endif %}
                                     {% elif slot['status'] == 'approved' %}
-                                        <span class="badge bg-success">Approved by {{ slot['approved_by_id'] }}</span>
+                                        <span class="badge bg-success">Approved by {{ slot['approved_by_name'] }}</span>
                                     {% endif %}
                                 {% endif %}
                             {% else %}
