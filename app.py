@@ -7,6 +7,8 @@ import urllib.parse
 from datetime import timedelta, date, time as dtime
 import os
 from werkzeug.utils import secure_filename
+from dateutil.relativedelta import relativedelta
+import calendar
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
@@ -101,7 +103,28 @@ def dashboard():
     db = get_db()
     user_email = g.get('user')
     user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
-    week_dates = get_week_dates()
+    # Week navigation
+    all_dates = get_week_dates()  # This now returns all dates in the range
+    # Only include weekdays (Mon-Fri)
+    all_weekdays = [d for d in all_dates if d.weekday() < 5]
+    # Group into weeks of 5 days (Mon-Fri)
+    weeks = [all_weekdays[i:i+5] for i in range(0, len(all_weekdays), 5)]
+    # Find the current week index
+    today = date.today()
+    current_week_index = 0
+    for idx, week in enumerate(weeks):
+        if today in week:
+            current_week_index = idx
+            break
+    # Determine week number from query param, default to current week
+    week_number = request.args.get('week')
+    if week_number is not None:
+        week_number = int(week_number)
+        if week_number < 0 or week_number >= len(weeks):
+            week_number = current_week_index
+    else:
+        week_number = current_week_index
+    week_dates = weeks[week_number]
     time_slots = get_time_slots()
     # Ensure slots exist for the week
     for day in week_dates:
@@ -122,9 +145,13 @@ def dashboard():
         slots_lookup[(slot['date'], slot['time'])] = slot
         if slot['status'] in ('booked', 'approved'):
             booked_dates.add(slot['date'])
-    today_str = date.today().strftime('%Y-%m-%d')
-    now_str = datetime.datetime.now().strftime('%H:%M')
-    return render_template('dashboard.html', user=user, slots_lookup=slots_lookup, week_dates=week_dates, time_slots=time_slots, booked_dates=booked_dates, today_str=today_str, now_str=now_str)
+    today_str = today.strftime('%Y-%m-%d')
+    now = datetime.datetime.now()
+    now_str = now.strftime('%H:%M')
+    current_month = today.strftime('%B')
+    current_date = today.strftime('%d %b %Y')
+    current_time = now.strftime('%I:%M %p')
+    return render_template('dashboard.html', user=user, slots_lookup=slots_lookup, week_dates=week_dates, time_slots=time_slots, booked_dates=booked_dates, today_str=today_str, now_str=now_str, week_number=week_number, total_weeks=len(weeks), current_month=current_month, current_date=current_date, current_time=current_time)
 
 @app.route('/logout')
 def logout():
@@ -220,8 +247,17 @@ def home():
 
 def get_week_dates():
     today = date.today()
-    start = today - timedelta(days=today.weekday())  # Monday
-    return [start + timedelta(days=i) for i in range(5)]  # Mon-Fri
+    # First day of last month
+    if today.month == 1:
+        first_day_last_month = date(today.year - 1, 12, 1)
+    else:
+        first_day_last_month = date(today.year, today.month - 1, 1)
+    # Last day of the month three months from now
+    three_months_later = today + relativedelta(months=+3)
+    last_day_three_months_later = date(three_months_later.year, three_months_later.month, calendar.monthrange(three_months_later.year, three_months_later.month)[1])
+    # Generate all dates in range
+    num_days = (last_day_three_months_later - first_day_last_month).days + 1
+    return [first_day_last_month + timedelta(days=i) for i in range(num_days)]
 
 def get_time_slots():
     return [dtime(hour=15, minute=0), dtime(hour=15, minute=30), dtime(hour=16, minute=0), dtime(hour=16, minute=30)]
