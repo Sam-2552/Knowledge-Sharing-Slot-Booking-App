@@ -49,19 +49,25 @@
                                     {% if d.strftime('%Y-%m-%d') in booked_dates %}
                                         <button class="btn btn-secondary btn-sm w-100" disabled>Slot Unavailable</button>
                                     {% else %}
-                                        <form method="POST" action="/book-slot">
+                                        <form method="POST" action="/book-slot" enctype="multipart/form-data">
                                             <input type="hidden" name="slot_id" value="{{ slot['id'] }}">
                                             <input type="text" name="topic" class="form-control mb-2" placeholder="Enter topic" required>
+                                            <textarea name="agenda" class="form-control mb-2" placeholder="Enter agenda" rows="2" required></textarea>
+                                            <input type="file" name="file" class="form-control mb-2">
                                             <button type="submit" class="btn btn-success btn-sm">Book Slot</button>
                                         </form>
                                     {% endif %}
                                 {% else %}
                                     <div class="fw-bold">{{ slot['topic'] }}</div>
-                                    <div class="small">By: {{ slot['presenter'] }}</div>
+                                    <div class="small">Agenda: {{ slot['agenda'] }}</div>
+                                    <div class="small">By: {{ slot['presenter_name'] }}</div>
+                                    {% if slot['file_path'] %}
+                                        <div class="small"><a href="/{{ slot['file_path'] }}" target="_blank">View File</a></div>
+                                    {% endif %}
                                     {% if slot['status'] == 'booked' %}
                                         <span class="badge bg-warning text-dark">Pending Approval</span>
                                     {% elif slot['status'] == 'approved' %}
-                                        <span class="badge bg-success">Approved by {{ slot['approved_by'] }}</span>
+                                        <span class="badge bg-success">Approved by {{ slot['approved_by_id'] }}</span>
                                     {% endif %}
                                 {% endif %}
                             {% else %}

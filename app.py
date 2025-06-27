@@ -5,10 +5,16 @@ import datetime
 from functools import wraps
 import urllib.parse
 from datetime import timedelta, date, time as dtime
+import os
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 app.config['DATABASE'] = 'users.db'
+
+UPLOAD_FOLDER = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # --- DB Setup ---
 def get_db():
@@ -37,9 +43,15 @@ def init_db():
         date TEXT NOT NULL,
         time TEXT NOT NULL,
         topic TEXT,
-        presenter TEXT,
+        agenda TEXT,
+        presenter_id INTEGER,
+        presenter_name TEXT,
         status TEXT NOT NULL DEFAULT 'available',
-        approved_by TEXT
+        approved_by_id INTEGER,
+        approved_by_name TEXT,
+        file_path TEXT,
+        FOREIGN KEY (presenter_id) REFERENCES users(id),
+        FOREIGN KEY (approved_by_id) REFERENCES users(id)
     )''')
     db.commit()
     # Insert default users if not exist
@@ -181,10 +193,18 @@ def book_slot():
     user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
     slot_id = request.form['slot_id']
     topic = request.form['topic']
+    agenda = request.form.get('agenda')
+    file_path = None
+    if 'file' in request.files and request.files['file'].filename:
+        file = request.files['file']
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
     # Check if slot is available
     slot = db.execute('SELECT * FROM slots WHERE id = ?', (slot_id,)).fetchone()
     if slot and slot['status'] == 'available':
-        db.execute('UPDATE slots SET topic = ?, presenter = ?, status = ? WHERE id = ?', (topic, user['name'], 'booked', slot_id))
+        db.execute('UPDATE slots SET topic = ?, agenda = ?, presenter_id = ?, presenter_name = ?, status = ?, file_path = ? WHERE id = ?',
+                   (topic, agenda, user['id'], user['name'], 'booked', file_path, slot_id))
         db.commit()
         return redirect(url_for('dashboard'))
     else:
