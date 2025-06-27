@@ -58,6 +58,7 @@
                         <th>Feedback</th>
                         <!-- <th>Comments</th> -->
                         <th>Points Awarded</th>
+                        {% if is_admin %}<th>Action</th>{% endif %}
                     </tr>
                 </thead>
                 <tbody>
@@ -73,9 +74,30 @@
                         <td>{{ a['status']|capitalize }}</td>
                         <td>{{ a['approval_reason'] or '-' }}</td>
                         <td>{{ a['rejection_reason'] or '-' }}</td>
-                        <td>{{ a['feedback'] or '-' }}</td>
+                        <td>
+                            {% if is_admin and not a['feedback'] and a['points_awarded'] is none %}
+                                <a href="/admin-feedback/{{ a['id'] }}" class="btn btn-sm btn-primary">Add</a>
+                            {% else %}
+                                {{ a['feedback'] or '-' }}
+                            {% endif %}
+                        </td>
                         <!-- <td>{{ a['comments'] or '-' }}</td> -->
-                        <td>{{ a['points_awarded'] if a['points_awarded'] is not none else '-' }}</td>
+                        <td>
+                            {% if is_admin and not a['feedback'] and a['points_awarded'] is none %}
+                                <a href="/admin-feedback/{{ a['id'] }}" class="btn btn-sm btn-primary">Add</a>
+                            {% else %}
+                                {{ a['points_awarded'] if a['points_awarded'] is not none else '-' }}
+                            {% endif %}
+                        </td>
+                        {% if is_admin %}
+                            <td>
+                                {% if not a['feedback'] and a['points_awarded'] is none %}
+                                    <a href="/admin-feedback/{{ a['id'] }}" class="btn btn-sm btn-primary">Add Feedback/Points</a>
+                                {% else %}
+                                    <span class="text-success">Done</span>
+                                {% endif %}
+                            </td>
+                        {% endif %}
                     </tr>
                     {% else %}
                     <tr><td colspan="10" class="text-muted">No activity found.</td></tr>

@@ -390,6 +390,38 @@ def admin_slot_action():
     db.commit()
     return redirect(url_for('admin_dashboard'))
 
+@app.route('/admin-feedback/<int:activity_id>', methods=['GET', 'POST'])
+@token_required
+def admin_feedback(activity_id):
+    db = get_db()
+    user_email = g.get('user')
+    admin = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
+    if admin['role'] != 'admin':
+        return redirect(url_for('dashboard'))
+    activity = db.execute('SELECT * FROM slot_activity WHERE id = ?', (activity_id,)).fetchone()
+    if not activity:
+        flash('Activity not found.')
+        return redirect(url_for('my_activity'))
+    if activity['feedback'] or activity['points_awarded'] is not None:
+        flash('Feedback and points already set for this activity.')
+        return redirect(url_for('my_activity'))
+    if request.method == 'POST':
+        feedback = request.form.get('feedback')
+        points = request.form.get('points')
+        if not feedback or not points:
+            flash('Feedback and points are required.')
+            return redirect(request.url)
+        try:
+            points = int(points)
+        except ValueError:
+            flash('Points must be a number.')
+            return redirect(request.url)
+        db.execute('UPDATE slot_activity SET feedback = ?, points_awarded = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?', (feedback, points, activity_id))
+        db.commit()
+        flash('Feedback and points added.')
+        return redirect(url_for('my_activity'))
+    return render_template('admin_feedback.html', activity=activity)
+
 # --- Home Redirect ---
 @app.route('/')
 def home():
