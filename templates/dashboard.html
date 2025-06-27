@@ -46,7 +46,11 @@
                             {% endif %}">
                             {% if slot %}
                                 {% if slot['status'] == 'available' %}
-                                    {% if d.strftime('%Y-%m-%d') in booked_dates %}
+                                    {% if d.strftime('%Y-%m-%d') < today_str %}
+                                        <button class="btn btn-secondary btn-sm w-100" disabled>Date Passed</button>
+                                    {% elif d.strftime('%Y-%m-%d') == today_str and t.strftime('%H:%M') < now_str %}
+                                        <button class="btn btn-secondary btn-sm w-100" disabled>Time Passed</button>
+                                    {% elif d.strftime('%Y-%m-%d') in booked_dates %}
                                         <button class="btn btn-secondary btn-sm w-100" disabled>Slot Unavailable</button>
                                     {% else %}
                                         <form method="POST" action="/book-slot" enctype="multipart/form-data">

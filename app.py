@@ -122,7 +122,9 @@ def dashboard():
         slots_lookup[(slot['date'], slot['time'])] = slot
         if slot['status'] in ('booked', 'approved'):
             booked_dates.add(slot['date'])
-    return render_template('dashboard.html', user=user, slots_lookup=slots_lookup, week_dates=week_dates, time_slots=time_slots, booked_dates=booked_dates)
+    today_str = date.today().strftime('%Y-%m-%d')
+    now_str = datetime.datetime.now().strftime('%H:%M')
+    return render_template('dashboard.html', user=user, slots_lookup=slots_lookup, week_dates=week_dates, time_slots=time_slots, booked_dates=booked_dates, today_str=today_str, now_str=now_str)
 
 @app.route('/logout')
 def logout():
