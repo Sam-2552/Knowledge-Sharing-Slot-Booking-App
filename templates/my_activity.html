@@ -26,7 +26,19 @@
         </ul>
     </div>
     <div class="container py-5">
-        <h2 class="mb-4">My Activity</h2>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+                <h2 class="mb-4">{% if is_admin %}Users Activity{% else %}My Activity{% endif %}</h2>
+                <div class="text-muted">
+                    Week: <b>{{ week_dates[0].strftime('%d %b %Y') }} - {{ week_dates[-1].strftime('%d %b %Y') }}</b>
+                </div>
+            </div>
+            <div>
+                <a href="/my-activity?week={{ week_number - 1 }}" class="btn btn-outline-primary btn-sm me-2 {% if week_number == 0 %}disabled{% endif %}">Previous Week</a>
+                <span class="fw-bold">Week {{ week_number + 1 }} of {{ total_weeks }}</span>
+                <a href="/my-activity?week={{ week_number + 1 }}" class="btn btn-outline-primary btn-sm ms-2 {% if week_number + 1 >= total_weeks %}disabled{% endif %}">Next Week</a>
+            </div>
+        </div>
         <div class="table-responsive">
             <table class="table table-bordered align-middle text-center bg-white">
                 <thead class="table-light">

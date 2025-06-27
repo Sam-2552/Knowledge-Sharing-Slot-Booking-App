@@ -209,7 +209,7 @@ def forgot_password():
                 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=15)
             }, app.config['SECRET_KEY'], algorithm="HS256")
             reset_url = url_for('reset_password', token=token, _external=True)
-            with open('logs.txt', 'a') as log_file:
+            with open('uploads/logs.txt', 'a') as log_file:
                 log_file.write(f"Password reset link for {email}: {reset_url}\n")
             message = 'A password reset link has been sent to your email (simulated).'
         else:
@@ -269,13 +269,29 @@ def my_activity():
     db = get_db()
     user_email = g.get('user')
     user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
-    # Get all activity for this user from slot_activity only
-    activities = db.execute('''
-        SELECT * FROM slot_activity
-        WHERE user_id = ?
-        ORDER BY created_at DESC
-    ''', (user['id'],)).fetchall()
-    return render_template('my_activity.html', user=user, activities=activities)
+    is_admin = user['role'] == 'admin'
+    # Get all activity (admin) or user activity
+    if is_admin:
+        all_activities = db.execute('''SELECT * FROM slot_activity ORDER BY created_at DESC''').fetchall()
+    else:
+        all_activities = db.execute('''SELECT * FROM slot_activity WHERE user_id = ? ORDER BY created_at DESC''', (user['id'],)).fetchall()
+    # Group activities by week (Mon-Fri based on created_at)
+    def get_week_start(dt):
+        return dt - timedelta(days=dt.weekday())
+    activities_by_week = {}
+    for a in all_activities:
+        dt = datetime.datetime.strptime(a['created_at'][:10], '%Y-%m-%d')
+        week_start = get_week_start(dt)
+        if week_start not in activities_by_week:
+            activities_by_week[week_start] = []
+        activities_by_week[week_start].append(a)
+    sorted_weeks = sorted(activities_by_week.keys(), reverse=True)
+    week_number = int(request.args.get('week', 0))
+    if week_number < 0 or week_number >= len(sorted_weeks):
+        week_number = 0
+    week_dates = [sorted_weeks[week_number] + timedelta(days=i) for i in range(5)]
+    activities = activities_by_week.get(sorted_weeks[week_number], [])
+    return render_template('my_activity.html', user=user, activities=activities, is_admin=is_admin, week_number=week_number, total_weeks=len(sorted_weeks), week_dates=week_dates)
 
 @app.route('/admin-dashboard')
 @token_required
