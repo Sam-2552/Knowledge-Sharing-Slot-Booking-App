@@ -45,6 +45,7 @@
             <table class="table table-bordered align-middle text-center bg-white">
                 <thead class="table-light">
                     <tr>
+                        {% if is_admin %}<th>Username</th>{% endif %}
                         <th>Date</th>
                         <th>Time</th>
                         <th>Topic</th>
@@ -62,6 +63,7 @@
                 <tbody>
                     {% for a in activities %}
                     <tr>
+                        {% if is_admin %}<td>{{ a['username'] }}</td>{% endif %}
                         <td>{{ a['created_at'][:10] }}</td>
                         <td>{{ a['created_at'][11:16] }}</td>
                         <td>{{ a['topic'] or '-' }}</td>

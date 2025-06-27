@@ -275,7 +275,12 @@ def my_activity():
     is_admin = user['role'] == 'admin'
     # Get all activity (admin) or user activity
     if is_admin:
-        all_activities = db.execute('''SELECT * FROM slot_activity ORDER BY created_at DESC''').fetchall()
+        # Admin sees all activity, join with users to get username
+        all_activities = db.execute('''
+            SELECT sa.*, u.name as username FROM slot_activity sa
+            JOIN users u ON sa.user_id = u.id
+            ORDER BY sa.created_at DESC
+        ''').fetchall()
     else:
         all_activities = db.execute('''SELECT * FROM slot_activity WHERE user_id = ? ORDER BY created_at DESC''', (user['id'],)).fetchall()
     # Group activities by week (Mon-Fri based on created_at)
