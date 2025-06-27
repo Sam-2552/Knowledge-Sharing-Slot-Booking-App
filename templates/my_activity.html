@@ -60,8 +60,8 @@
                         <th>Rejection Reason</th>
                         <th>Feedback</th>
                         <!-- <th>Comments</th> -->
-                        <th>Points Awarded</th>
-                        {% if is_admin %}<th>Action</th>{% endif %}
+                        <th>Points</th>
+                        {% if is_admin %}<th>Awarded</th>{% endif %}
                     </tr>
                 </thead>
                 <tbody>
@@ -95,7 +95,7 @@
                         {% if is_admin %}
                             <td>
                                 {% if not a['feedback'] and a['points_awarded'] is none %}
-                                    <a href="/admin-feedback/{{ a['id'] }}" class="btn btn-sm btn-primary">Add Feedback/Points</a>
+                                <span class="text-danger">Pending</span>
                                 {% else %}
                                     <span class="text-success">Done</span>
                                 {% endif %}
