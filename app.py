@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, make_response, g, flash
+from flask import Flask, render_template, request, redirect, url_for, make_response, g, flash, send_from_directory
 import sqlite3
 import jwt
 import datetime
@@ -364,6 +364,10 @@ def admin_slot_action():
 @app.route('/')
 def home():
     return redirect(url_for('login'))
+
+@app.route('/uploads/<path:filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 def get_week_dates():
     today = date.today()
