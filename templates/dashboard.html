@@ -1,215 +1,34 @@
-<html><head>
-    <meta charset="utf-8"/>
-    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" onload="this.rel='stylesheet'" rel="stylesheet"/>
-    <title>Stitch Design</title>
-    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <style type="text/tailwindcss">
-          :root {
-            --primary-color: #dce8f3;
-            --text-primary: #101518;
-            --text-secondary: #5c748a;
-            --background-primary: #f7f9fc;
-            --background-secondary: #ffffff;
-            --border-color: #eaedf1;
-          }
-          .slot-available {
-            background-color: #e6f7f0;color: #0c6649;
-            border: 1px solid #a2e5c8;
-          }
-          .slot-past {
-            background-color: #f1f3f6;color: #5c748a;
-            border: 1px solid #d4dce2;
-          }
-          .slot-draft {
-            background-color: #fff3e0;color: #996a00;
-            border: 1px solid #ffd699;
-          }
-          .slot-confirmed {
-            background-color: #e3f2fd;color: #1976d2;
-            border: 1px solid #a0cfff;
-          }
-          .slot-rejected {
-            background-color: #ffebee;color: #c62828;
-            border: 1px solid #f7a0a0;
-          }
-          .active-filter {
-            background-color: var(--primary-color) !important;
-            color: var(--text-primary) !important;
-            font-weight: 600;
-          }
-        </style>
-    </head>
-    <body class="bg-gray-50" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
-    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden bg-[var(--background-primary)]">
-    <div class="layout-container flex h-full grow flex-col">
-    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--border-color)] px-6 md:px-10 py-4">
-    <div class="flex items-center gap-3 text-[var(--text-primary)]">
-    <div class="size-8 text-[var(--primary-color)]">
-    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g id="Logo"><path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path><path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path></g></svg>
-    </div>
-    <h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em]">Workshop Scheduler</h2>
-    </div>
-    <nav class="hidden md:flex items-center gap-8">
-    <a class="text-[var(--text-primary)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">Dashboard</a>
-    <a class="text-[var(--text-primary)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">Bookings</a>
-    <a class="text-[var(--text-primary)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">Workshops</a>
-    <a class="text-[var(--text-primary)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">Settings</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Knowledge Sharing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light" style="min-height: 100vh;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Knowledge Sharing</a>
+            <div class="d-flex">
+                <a href="/logout" class="btn btn-outline-secondary">Logout</a>
+            </div>
+        </div>
     </nav>
-    <div class="flex items-center gap-4">
-    <button class="md:hidden text-[var(--text-primary)]">
-    <span class="material-symbols-outlined">menu</span>
-    </button>
-    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6kjNa4VSi21PDaToba7AiAOXqJTv7tnojvqyYVdk0IjUItpE3kJvomQ-IMwCfBjJgCkaOSvrgz_mao0EeuNMYnmNvBIf4A6PTITIaJtV33SF55VEmBgse0PFrf1SbZwSBeRlOImkU2z2_1eisDUw0BhcxSk0kmfGzCWO_7lP7TxTX7gLDbe9MkjMxHjn4h81uJVQ1uvROmnfb3XT0vlLawXShsNA31ygh8n2hw7hDbaY8CNJAssPxq_sTRZMOQBK5JtnZNd41SQ1O");'></div>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-5 text-center">
+                        <h2 class="mb-3">Welcome{% if user %}, {{ user }}{% endif %}!</h2>
+                        <p class="lead">This is your dashboard for the Knowledge Sharing app.</p>
+                        <hr>
+                        <p class="text-muted">You are successfully logged in. Use the navigation above to logout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </header>
-    <main class="flex-1 px-4 sm:px-6 md:px-10 py-8 bg-[var(--background-secondary)]">
-    <div class="max-w-7xl mx-auto">
-    <div class="mb-8">
-    <h1 class="text-[var(--text-primary)] text-3xl font-bold leading-tight tracking-tight">Workshop Schedule</h1>
-    <p class="text-[var(--text-secondary)] text-base font-normal">View and manage workshop slots for the week.</p>
-    </div>
-    <div class="mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
-    <div class="flex items-center rounded-lg bg-[var(--border-color)] p-1">
-    <button class="px-4 py-2 rounded-md text-sm font-medium text-[var(--text-secondary)] hover:bg-white hover:text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] transition-all">Day</button>
-    <button class="px-4 py-2 rounded-md text-sm font-medium text-[var(--text-primary)] bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] transition-all">Week</button>
-    </div>
-    <div class="flex items-center gap-2">
-    <button class="px-4 py-2 rounded-lg text-sm font-medium text-[var(--text-secondary)] bg-[var(--border-color)] hover:bg-gray-200 active-filter">All Bookings</button>
-    <button class="px-4 py-2 rounded-lg text-sm font-medium text-[var(--text-secondary)] bg-[var(--border-color)] hover:bg-gray-200">Your Bookings Only</button>
-    </div>
-    </div>
-    <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
-    <div class="xl:col-span-1 bg-white p-4 rounded-xl border border-[var(--border-color)] shadow-sm">
-    <div class="flex items-center justify-between mb-4">
-    <button class="p-2 rounded-full hover:bg-gray-100 text-[var(--text-secondary)]">
-    <span class="material-symbols-outlined">chevron_left</span>
-    </button>
-    <p class="text-[var(--text-primary)] text-base font-semibold">July 2024</p>
-    <button class="p-2 rounded-full hover:bg-gray-100 text-[var(--text-secondary)]">
-    <span class="material-symbols-outlined">chevron_right</span>
-    </button>
-    </div>
-    <div class="grid grid-cols-7 gap-1 text-center">
-    <p class="text-[var(--text-secondary)] text-xs font-medium">S</p>
-    <p class="text-[var(--text-secondary)] text-xs font-medium">M</p>
-    <p class="text-[var(--text-secondary)] text-xs font-medium">T</p>
-    <p class="text-[var(--text-secondary)] text-xs font-medium">W</p>
-    <p class="text-[var(--text-secondary)] text-xs font-medium">T</p>
-    <p class="text-[var(--text-secondary)] text-xs font-medium">F</p>
-    <p class="text-[var(--text-secondary)] text-xs font-medium">S</p>
-    <div class="col-start-4"></div>
-    <script>
-                        for (let i = 1; i <= 30; i++) {
-                          document.write(`
-                            <button class="h-9 w-full text-sm font-medium rounded-full hover:bg-gray-100 ${i === 5 ? 'bg-[var(--primary-color)] text-[var(--text-primary)]' : 'text-[var(--text-primary)]'}">
-                              ${i}
-                            </button>
-                          `);
-                        }
-                      </script>
-    </div>
-    </div>
-    <div class="xl:col-span-2 bg-white p-4 rounded-xl border border-[var(--border-color)] shadow-sm">
-    <h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">Legend</h3>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-    <div class="flex items-center gap-2">
-    <div class="size-3 rounded-full bg-green-100 border border-green-300"></div>
-    <span class="text-xs text-[var(--text-secondary)]">Available</span>
-    </div>
-    <div class="flex items-center gap-2">
-    <div class="size-3 rounded-full bg-gray-200 border border-gray-400"></div>
-    <span class="text-xs text-[var(--text-secondary)]">Past</span>
-    </div>
-    <div class="flex items-center gap-2">
-    <div class="size-3 rounded-full bg-orange-100 border border-orange-300"></div>
-    <span class="text-xs text-[var(--text-secondary)]">Draft</span>
-    </div>
-    <div class="flex items-center gap-2">
-    <div class="size-3 rounded-full bg-blue-100 border border-blue-300"></div>
-    <span class="text-xs text-[var(--text-secondary)]">Confirmed</span>
-    </div>
-    <div class="flex items-center gap-2">
-    <div class="size-3 rounded-full bg-red-100 border border-red-300"></div>
-    <span class="text-xs text-[var(--text-secondary)]">Rejected/Blocked</span>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="overflow-x-auto rounded-xl border border-[var(--border-color)] bg-white shadow-sm">
-    <table class="min-w-full divide-y divide-[var(--border-color)]">
-    <thead class="bg-gray-50">
-    <tr>
-    <th class="sticky left-0 bg-gray-50 z-10 px-4 py-3.5 text-left text-xs font-semibold text-[var(--text-primary)] sm:w-32" scope="col">Time</th>
-    <th class="px-3 py-3.5 text-center text-xs font-semibold text-[var(--text-primary)]" scope="col">Mon, Jul 1</th>
-    <th class="px-3 py-3.5 text-center text-xs font-semibold text-[var(--text-primary)]" scope="col">Tue, Jul 2</th>
-    <th class="px-3 py-3.5 text-center text-xs font-semibold text-[var(--text-primary)]" scope="col">Wed, Jul 3</th>
-    <th class="px-3 py-3.5 text-center text-xs font-semibold text-[var(--text-primary)]" scope="col">Thu, Jul 4</th>
-    <th class="px-3 py-3.5 text-center text-xs font-semibold text-[var(--text-primary)]" scope="col">Fri, Jul 5</th>
-    <th class="px-3 py-3.5 text-center text-xs font-semibold text-[var(--text-primary)]" scope="col">Sat, Jul 6</th>
-    <th class="px-3 py-3.5 text-center text-xs font-semibold text-[var(--text-primary)]" scope="col">Sun, Jul 7</th>
-    </tr>
-    </thead>
-    <tbody class="divide-y divide-[var(--border-color)] bg-white">
-    <script>
-                        const startTime = 2 * 60; // 2 AM in minutes
-                        const endTime = 16 * 60; // 4 PM in minutes
-                        const interval = 15; // 15 minutes
-                        for (let time = startTime; time <= endTime; time += interval) {
-                          const hours = Math.floor(time / 60);
-                          const minutes = time % 60;
-                          const ampm = hours >= 12 ? 'PM' : 'AM';
-                          const displayHours = hours % 12 === 0 ? 12 : hours % 12;
-                          const displayMinutes = minutes < 10 ? '0' + minutes : minutes;
-                          const timeString = `${displayHours}:${displayMinutes} ${ampm}`;
-                          let rowHtml = `<tr class="hover:bg-gray-50 transition-colors">
-                            <td class="sticky left-0 bg-white whitespace-nowrap px-4 py-2.5 text-xs font-medium text-[var(--text-secondary)]">${timeString}</td>`;
-                          const slotTypes = ['available', 'past', 'draft', 'confirmed', 'rejected'];
-                          const slotTexts = {
-                            available: 'Available',
-                            past: 'Past Event',
-                            draft: 'Draft: UX Workshop',
-                            confirmed: 'Confirmed: Design Sprint',
-                            rejected: 'Blocked',
-                          };
-                          for (let day = 0; day < 7; day++) {
-                            // Randomly assign a slot type for demonstration
-                            const randomSlotType = slotTypes[Math.floor(Math.random() * slotTypes.length)];
-                            const slotClass = `slot-${randomSlotType}`;
-                            const slotText = slotTexts[randomSlotType] || 'Status';
-                            // Example: some slots are past, others are available or booked
-                            let currentSlotClass = 'slot-available';
-                            let currentSlotText = 'Available';
-                            if (hours < 8 && day < 2) { // Example: past slots
-                                currentSlotClass = 'slot-past';
-                                currentSlotText = 'Past';
-                            } else if (hours === 9 && day === 2) {
-                                currentSlotClass = 'slot-draft';
-                                currentSlotText = 'Draft: UI Review';
-                            } else if (hours === 10 && day === 3) {
-                                currentSlotClass = 'slot-confirmed';
-                                currentSlotText = 'Confirmed: Coding Session';
-                            } else if (hours === 14 && day === 0) {
-                               currentSlotClass = 'slot-rejected';
-                               currentSlotText = 'Not Available';
-                            }
-                            rowHtml += `<td class="whitespace-nowrap px-2 py-2.5 text-xs text-center">
-                                          <button class="w-full h-full p-1.5 rounded-md text-xs font-medium transition-all duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-opacity-50 ${currentSlotClass} hover:opacity-80 focus:ring-blue-400">
-                                            ${currentSlotText}
-                                          </button>
-                                        </td>`;
-                          }
-                          rowHtml += `</tr>`;
-                          document.write(rowHtml);
-                        }
-                      </script>
-    </tbody>
-    </table>
-    </div>
-    </div>
-    </main>
-    </div>
-    </div>
-    
-    </body></html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
