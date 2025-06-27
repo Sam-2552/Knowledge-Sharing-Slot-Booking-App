@@ -5,28 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Knowledge Sharing</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .slot-available { background: #f8f9fa; }
+        .slot-booked { background: #fff3cd; }
+        .slot-approved { background: #d4edda; }
+    </style>
 </head>
 <body class="bg-light" style="min-height: 100vh;">
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Knowledge Sharing</a>
+            <a class="navbar-brand fw-bold" href="#">Knowledge Sharing Portal</a>
             <div class="d-flex">
                 <a href="/logout" class="btn btn-outline-secondary">Logout</a>
             </div>
         </div>
     </nav>
     <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card shadow-sm">
-                    <div class="card-body p-5 text-center">
-                        <h2 class="mb-3">Welcome{% if user %}, {{ user }}{% endif %}!</h2>
-                        <p class="lead">This is your dashboard for the Knowledge Sharing app.</p>
-                        <hr>
-                        <p class="text-muted">You are successfully logged in. Use the navigation above to logout.</p>
-                    </div>
-                </div>
-            </div>
+        <h2 class="mb-4">Welcome, {{ user['name'] }}!</h2>
+        <h4 class="mb-4">Book Your Knowledge Sharing Slot</h4>
+        <div class="table-responsive">
+            <table class="table table-bordered align-middle text-center bg-white">
+                <thead class="table-light">
+                    <tr>
+                        <th>Time</th>
+                        {% for d in week_dates %}
+                        <th>{{ d.strftime('%A') }}<br><span class="text-muted small">{{ d.strftime('%d %b') }}</span></th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for t in time_slots %}
+                    <tr>
+                        <th scope="row">{{ t.strftime('%I:%M %p') }} - {{ (t.replace(minute=t.minute+30) if t.minute==0 else t.replace(hour=t.hour+1, minute=0)).strftime('%I:%M %p') }}</th>
+                        {% for d in week_dates %}
+                        {% set slot = slots_lookup.get((d.strftime('%Y-%m-%d'), t.strftime('%H:%M'))) %}
+                        <td class="
+                            {% if slot and slot['status'] == 'available' %}slot-available
+                            {% elif slot and slot['status'] == 'booked' %}slot-booked
+                            {% elif slot and slot['status'] == 'approved' %}slot-approved
+                            {% endif %}">
+                            {% if slot %}
+                                {% if slot['status'] == 'available' %}
+                                    {% if d.strftime('%Y-%m-%d') in booked_dates %}
+                                        <button class="btn btn-secondary btn-sm w-100" disabled>Slot Unavailable</button>
+                                    {% else %}
+                                        <form method="POST" action="/book-slot">
+                                            <input type="hidden" name="slot_id" value="{{ slot['id'] }}">
+                                            <input type="text" name="topic" class="form-control mb-2" placeholder="Enter topic" required>
+                                            <button type="submit" class="btn btn-success btn-sm">Book Slot</button>
+                                        </form>
+                                    {% endif %}
+                                {% else %}
+                                    <div class="fw-bold">{{ slot['topic'] }}</div>
+                                    <div class="small">By: {{ slot['presenter'] }}</div>
+                                    {% if slot['status'] == 'booked' %}
+                                        <span class="badge bg-warning text-dark">Pending Approval</span>
+                                    {% elif slot['status'] == 'approved' %}
+                                        <span class="badge bg-success">Approved by {{ slot['approved_by'] }}</span>
+                                    {% endif %}
+                                {% endif %}
+                            {% else %}
+                                <span class="text-muted">N/A</span>
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

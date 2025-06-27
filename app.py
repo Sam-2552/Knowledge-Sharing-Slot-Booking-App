@@ -4,6 +4,7 @@ import jwt
 import datetime
 from functools import wraps
 import urllib.parse
+from datetime import timedelta, date, time as dtime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
@@ -30,6 +31,15 @@ def init_db():
         email TEXT UNIQUE NOT NULL,
         password TEXT NOT NULL,
         role TEXT NOT NULL DEFAULT 'user'
+    )''')
+    db.execute('''CREATE TABLE IF NOT EXISTS slots (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        date TEXT NOT NULL,
+        time TEXT NOT NULL,
+        topic TEXT,
+        presenter TEXT,
+        status TEXT NOT NULL DEFAULT 'available',
+        approved_by TEXT
     )''')
     db.commit()
     # Insert default users if not exist
@@ -76,7 +86,31 @@ def login():
 @app.route('/dashboard')
 @token_required
 def dashboard():
-    return render_template('dashboard.html', user=g.get('user'))
+    db = get_db()
+    user_email = g.get('user')
+    user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
+    week_dates = get_week_dates()
+    time_slots = get_time_slots()
+    # Ensure slots exist for the week
+    for day in week_dates:
+        for slot_time in time_slots:
+            slot_date = day.strftime('%Y-%m-%d')
+            slot_time_str = slot_time.strftime('%H:%M')
+            exists = db.execute('SELECT 1 FROM slots WHERE date = ? AND time = ?', (slot_date, slot_time_str)).fetchone()
+            if not exists:
+                db.execute('INSERT INTO slots (date, time) VALUES (?, ?)', (slot_date, slot_time_str))
+    db.commit()
+    # Fetch all slots for the week
+    slots = db.execute('SELECT * FROM slots WHERE date IN ({}) ORDER BY date, time'.format(
+        ','.join(['?']*len(week_dates))), [d.strftime('%Y-%m-%d') for d in week_dates]).fetchall()
+    # Build a lookup for slots by (date, time)
+    slots_lookup = {}
+    booked_dates = set()
+    for slot in slots:
+        slots_lookup[(slot['date'], slot['time'])] = slot
+        if slot['status'] in ('booked', 'approved'):
+            booked_dates.add(slot['date'])
+    return render_template('dashboard.html', user=user, slots_lookup=slots_lookup, week_dates=week_dates, time_slots=time_slots, booked_dates=booked_dates)
 
 @app.route('/logout')
 def logout():
@@ -139,10 +173,36 @@ def reset_password(token):
         return redirect(url_for('login'))
     return render_template('reset_password.html', error=error)
 
+@app.route('/book-slot', methods=['POST'])
+@token_required
+def book_slot():
+    db = get_db()
+    user_email = g.get('user')
+    user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
+    slot_id = request.form['slot_id']
+    topic = request.form['topic']
+    # Check if slot is available
+    slot = db.execute('SELECT * FROM slots WHERE id = ?', (slot_id,)).fetchone()
+    if slot and slot['status'] == 'available':
+        db.execute('UPDATE slots SET topic = ?, presenter = ?, status = ? WHERE id = ?', (topic, user['name'], 'booked', slot_id))
+        db.commit()
+        return redirect(url_for('dashboard'))
+    else:
+        flash('Slot is no longer available.')
+        return redirect(url_for('dashboard'))
+
 # --- Home Redirect ---
 @app.route('/')
 def home():
     return redirect(url_for('login'))
+
+def get_week_dates():
+    today = date.today()
+    start = today - timedelta(days=today.weekday())  # Monday
+    return [start + timedelta(days=i) for i in range(5)]  # Mon-Fri
+
+def get_time_slots():
+    return [dtime(hour=15, minute=0), dtime(hour=15, minute=30), dtime(hour=16, minute=0), dtime(hour=16, minute=30)]
 
 if __name__ == '__main__':
     with app.app_context():
