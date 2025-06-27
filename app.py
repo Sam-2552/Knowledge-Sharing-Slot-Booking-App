@@ -52,6 +52,7 @@ def init_db():
         approved_by_id INTEGER,
         approved_by_name TEXT,
         file_path TEXT,
+        link TEXT,
         FOREIGN KEY (presenter_id) REFERENCES users(id),
         FOREIGN KEY (approved_by_id) REFERENCES users(id)
     )''')
@@ -68,6 +69,7 @@ def init_db():
         topic TEXT,
         agenda TEXT,
         file_path TEXT,
+        link TEXT,
         created_at TEXT DEFAULT CURRENT_TIMESTAMP,
         updated_at TEXT DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (slot_id) REFERENCES slots(id),
@@ -244,6 +246,7 @@ def book_slot():
     slot_id = request.form['slot_id']
     topic = request.form['topic']
     agenda = request.form.get('agenda')
+    link = request.form.get('link')
     file_path = None
     if 'file' in request.files and request.files['file'].filename:
         file = request.files['file']
@@ -253,10 +256,10 @@ def book_slot():
     # Check if slot is available
     slot = db.execute('SELECT * FROM slots WHERE id = ?', (slot_id,)).fetchone()
     if slot and slot['status'] == 'available':
-        db.execute('UPDATE slots SET topic = ?, agenda = ?, presenter_id = ?, presenter_name = ?, status = ?, file_path = ? WHERE id = ?',
-                   (topic, agenda, user['id'], user['name'], 'booked', file_path, slot_id))
-        # Insert into slot_activity with topic, agenda, file_path
-        db.execute('INSERT INTO slot_activity (slot_id, user_id, status, topic, agenda, file_path) VALUES (?, ?, ?, ?, ?, ?)', (slot_id, user['id'], 'booked', topic, agenda, file_path))
+        db.execute('UPDATE slots SET topic = ?, agenda = ?, presenter_id = ?, presenter_name = ?, status = ?, file_path = ?, link = ? WHERE id = ?',
+                   (topic, agenda, user['id'], user['name'], 'booked', file_path, link, slot_id))
+        # Insert into slot_activity with topic, agenda, file_path, link
+        db.execute('INSERT INTO slot_activity (slot_id, user_id, status, topic, agenda, file_path, link) VALUES (?, ?, ?, ?, ?, ?, ?)', (slot_id, user['id'], 'booked', topic, agenda, file_path, link))
         db.commit()
         return redirect(url_for('dashboard'))
     else:
@@ -287,11 +290,17 @@ def my_activity():
         activities_by_week[week_start].append(a)
     sorted_weeks = sorted(activities_by_week.keys(), reverse=True)
     week_number = int(request.args.get('week', 0))
-    if week_number < 0 or week_number >= len(sorted_weeks):
-        week_number = 0
-    week_dates = [sorted_weeks[week_number] + timedelta(days=i) for i in range(5)]
-    activities = activities_by_week.get(sorted_weeks[week_number], [])
-    return render_template('my_activity.html', user=user, activities=activities, is_admin=is_admin, week_number=week_number, total_weeks=len(sorted_weeks), week_dates=week_dates)
+    if not sorted_weeks:
+        week_dates = []
+        activities = []
+        total_weeks = 0
+    else:
+        if week_number < 0 or week_number >= len(sorted_weeks):
+            week_number = 0
+        week_dates = [sorted_weeks[week_number] + timedelta(days=i) for i in range(5)]
+        activities = activities_by_week.get(sorted_weeks[week_number], [])
+        total_weeks = len(sorted_weeks)
+    return render_template('my_activity.html', user=user, activities=activities, is_admin=is_admin, week_number=week_number, total_weeks=total_weeks, week_dates=week_dates)
 
 @app.route('/admin-dashboard')
 @token_required

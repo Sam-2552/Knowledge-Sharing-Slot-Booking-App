@@ -78,6 +78,7 @@
                                             <input type="text" name="topic" class="form-control mb-2" placeholder="Enter topic" required>
                                             <textarea name="agenda" class="form-control mb-2" placeholder="Enter agenda" rows="2" required></textarea>
                                             <input type="file" name="file" class="form-control mb-2">
+                                            <input type="url" name="link" class="form-control mb-2" placeholder="Google Docs/PPT Link (optional)">
                                             <button type="submit" class="btn btn-success btn-sm">Book Slot</button>
                                         </form>
                                     {% endif %}
@@ -87,6 +88,9 @@
                                     <div class="small">By: {{ slot['presenter_name'] }}</div>
                                     {% if slot['file_path'] %}
                                         <div class="small"><a href="/{{ slot['file_path'] }}" target="_blank">View File</a></div>
+                                    {% endif %}
+                                    {% if slot['link'] %}
+                                        <div class="small"><a href="{{ slot['link'] }}" target="_blank">View Link</a></div>
                                     {% endif %}
                                     {% if slot['status'] == 'booked' %}
                                         {% if is_admin %}

@@ -29,9 +29,11 @@
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
                 <h2 class="mb-4">{% if is_admin %}Users Activity{% else %}My Activity{% endif %}</h2>
+                {% if week_dates and week_dates|length > 0 %}
                 <div class="text-muted">
                     Week: <b>{{ week_dates[0].strftime('%d %b %Y') }} - {{ week_dates[-1].strftime('%d %b %Y') }}</b>
                 </div>
+                {% endif %}
             </div>
             <div>
                 <a href="/my-activity?week={{ week_number - 1 }}" class="btn btn-outline-primary btn-sm me-2 {% if week_number == 0 %}disabled{% endif %}">Previous Week</a>
@@ -48,6 +50,7 @@
                         <th>Topic</th>
                         <th>Agenda</th>
                         <th>File</th>
+                        <th>Link</th>
                         <th>Status</th>
                         <th>Approval Reason</th>
                         <th>Rejection Reason</th>
@@ -64,6 +67,7 @@
                         <td>{{ a['topic'] or '-' }}</td>
                         <td>{{ a['agenda'] or '-' }}</td>
                         <td>{% if a['file_path'] %}<a href="/{{ a['file_path'] }}" target="_blank">View File</a>{% else %}-{% endif %}</td>
+                        <td>{% if a['link'] %}<a href="{{ a['link'] }}" target="_blank">View Link</a>{% else %}-{% endif %}</td>
                         <td>{{ a['status']|capitalize }}</td>
                         <td>{{ a['approval_reason'] or '-' }}</td>
                         <td>{{ a['rejection_reason'] or '-' }}</td>
