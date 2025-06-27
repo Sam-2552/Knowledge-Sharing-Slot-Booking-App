@@ -422,6 +422,19 @@ def admin_feedback(activity_id):
         return redirect(url_for('my_activity'))
     return render_template('admin_feedback.html', activity=activity)
 
+@app.route('/leaderboard')
+@token_required
+def leaderboard():
+    db = get_db()
+    leaderboard = db.execute('''
+        SELECT u.name, COALESCE(SUM(sa.points_awarded), 0) as total_points
+        FROM users u
+        LEFT JOIN slot_activity sa ON u.id = sa.user_id
+        GROUP BY u.id
+        ORDER BY total_points DESC, u.name ASC
+    ''').fetchall()
+    return render_template('leaderboard.html', leaderboard=leaderboard)
+
 # --- Home Redirect ---
 @app.route('/')
 def home():
