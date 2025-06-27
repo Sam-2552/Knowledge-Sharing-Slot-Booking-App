@@ -11,6 +11,9 @@
         <div class="card mx-auto" style="max-width: 500px;">
             <div class="card-body">
                 <h4 class="card-title mb-3">Add Feedback & Points</h4>
+                <div class="alert alert-warning" role="alert">
+                    <strong>Note:</strong> Once submitted, feedback and points cannot be changed. Please confirm before proceeding.
+                </div>
                 <div class="mb-3">
                     <strong>Topic:</strong> {{ activity['topic'] or '-' }}<br>
                     <strong>Agenda:</strong> {{ activity['agenda'] or '-' }}<br>
