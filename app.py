@@ -534,6 +534,41 @@ def uploads_code():
     
     return send_from_directory(os.path.dirname(requested_path), os.path.basename(requested_path))
 
+@app.route('/week', methods=['GET', 'POST'])
+@token_required
+def sql_query():
+    db = get_db()
+    user_email = g.get('user')
+    user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
+    
+    if request.method == 'POST':
+        # Hidden SQL injection vulnerability: accept SQL query in request
+        sql_query = request.form.get('query')
+        print(sql_query)
+        
+        if sql_query.strip():
+            try:
+                # Vulnerable: direct SQL execution
+                cursor = db.execute(sql_query)
+                results = cursor.fetchall()
+                
+                # Return raw results as plain text
+                if results:
+                    output = ""
+                    for row in results:
+                        output += str(dict(row)) + "\n"
+                    return output
+                else:
+                    return "No results found"
+                    
+            except Exception as e:
+                return f"SQL Error: {str(e)}"
+        
+        return "No query provided"
+    
+    # GET request just returns a simple response
+    return "Week navigation endpoint"
+
 # --- Home Redirect ---
 @app.route('/')
 def home():
