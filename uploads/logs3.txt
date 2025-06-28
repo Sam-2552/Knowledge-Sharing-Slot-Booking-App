@@ -666,3 +666,82 @@ Password reset link for user@example.com: http://127.0.0.1:5000/reset-password/e
 2025-06-28 13:19:43,693 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:19:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
 2025-06-28 13:20:10,184 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:20:10] "GET /forgot-password?email="><script>alert(document.cookie)</script> HTTP/1.1" 200 -
 2025-06-28 13:20:10,288 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:20:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:21:06,561 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 13:21:07,231 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 13:21:07,237 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 13:21:11,311 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 13:21:11,925 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 13:21:11,930 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 13:21:16,343 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:16] "GET /forgot-password?email="><script>alert(document.cookie)</script> HTTP/1.1" 200 -
+2025-06-28 13:21:16,418 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:21:20,587 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:20] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-28 13:21:20,627 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:20] "GET /login HTTP/1.1" 200 -
+2025-06-28 13:21:20,729 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:21:21,221 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 13:21:22,954 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 13:21:22,962 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 13:21:28,115 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-28 13:21:28,154 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:28] "GET /dashboard HTTP/1.1" 200 -
+2025-06-28 13:21:28,212 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:21:32,499 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:32] "GET /forgot-password?email="><script>alert(document.cookie)</script> HTTP/1.1" 200 -
+2025-06-28 13:21:32,550 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:21:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:05,024 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:05] "GET /dashboard?week=1 HTTP/1.1" 200 -
+2025-06-28 13:22:05,085 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:05,435 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:05] "GET /dashboard?week=2 HTTP/1.1" 200 -
+2025-06-28 13:22:05,502 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:05,867 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:05] "GET /dashboard?week=3 HTTP/1.1" 200 -
+2025-06-28 13:22:05,934 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:06,152 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:06] "GET /dashboard?week=4 HTTP/1.1" 200 -
+2025-06-28 13:22:06,260 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:06,539 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:06] "GET /dashboard?week=5 HTTP/1.1" 200 -
+2025-06-28 13:22:06,643 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:06,848 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:06] "GET /dashboard?week=6 HTTP/1.1" 200 -
+2025-06-28 13:22:07,013 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:07,157 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:07] "GET /dashboard?week=7 HTTP/1.1" 200 -
+2025-06-28 13:22:07,345 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:07,468 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:07] "GET /dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 13:22:07,667 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:11,374 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:11] "GET /dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 13:22:11,443 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:24,506 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:24] "[32mPOST /book-slot HTTP/1.1[0m" 302 -
+2025-06-28 13:22:24,521 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:24] "GET /dashboard HTTP/1.1" 200 -
+2025-06-28 13:22:24,600 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:26,389 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:26] "GET /dashboard?week=1 HTTP/1.1" 200 -
+2025-06-28 13:22:26,437 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:26,789 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:26] "GET /dashboard?week=2 HTTP/1.1" 200 -
+2025-06-28 13:22:26,855 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:27,198 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:27] "GET /dashboard?week=3 HTTP/1.1" 200 -
+2025-06-28 13:22:27,265 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:27,637 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:27] "GET /dashboard?week=4 HTTP/1.1" 200 -
+2025-06-28 13:22:27,719 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:28,110 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:28] "GET /dashboard?week=5 HTTP/1.1" 200 -
+2025-06-28 13:22:28,180 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:28,623 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:28] "GET /dashboard?week=6 HTTP/1.1" 200 -
+2025-06-28 13:22:28,697 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 13:22:32,088 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:32] "GET /dashboard?week=7 HTTP/1.1" 200 -
+2025-06-28 13:22:32,637 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:32] "GET /dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 13:22:37,748 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:37] "GET /dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 13:22:41,082 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:22:41] "GET /forgot-password?email="><script>alert(document.cookie)</script> HTTP/1.1" 200 -
+2025-06-28 13:25:06,832 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:25:06] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 13:25:09,329 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:25:09] "GET /leaderboard HTTP/1.1" 200 -
+2025-06-28 13:25:10,922 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:25:10] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 13:25:19,628 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:25:19] "GET /dashboard HTTP/1.1" 200 -
+2025-06-28 13:25:54,100 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:25:54] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 13:25:56,012 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:25:56] "GET /leaderboard HTTP/1.1" 200 -
+2025-06-28 13:25:58,247 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:25:58] "GET /dashboard HTTP/1.1" 200 -
+2025-06-28 13:26:01,243 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:01] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 13:26:08,610 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:08] "GET /dashboard HTTP/1.1" 200 -
+2025-06-28 13:26:16,790 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:16] "GET /dashboard?week=1 HTTP/1.1" 200 -
+2025-06-28 13:26:17,034 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:17] "GET /dashboard?week=2 HTTP/1.1" 200 -
+2025-06-28 13:26:17,241 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:17] "GET /dashboard?week=3 HTTP/1.1" 200 -
+2025-06-28 13:26:17,718 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:17] "GET /dashboard?week=4 HTTP/1.1" 200 -
+2025-06-28 13:26:17,939 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:17] "GET /dashboard?week=5 HTTP/1.1" 200 -
+2025-06-28 13:26:18,404 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:18] "GET /dashboard?week=6 HTTP/1.1" 200 -
+2025-06-28 13:26:18,906 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:18] "GET /dashboard?week=7 HTTP/1.1" 200 -
+2025-06-28 13:26:19,479 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:19] "GET /dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 13:26:20,039 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:20] "GET /dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 13:26:20,257 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:20] "GET /dashboard?week=10 HTTP/1.1" 200 -
+2025-06-28 13:26:22,291 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:26:22] "GET /dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 13:28:27,142 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 13:28:28,347 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 13:28:28,352 - werkzeug - INFO -  * Debugger PIN: 145-442-464

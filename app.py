@@ -123,7 +123,7 @@ def login():
                 'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
             }, app.config['SECRET_KEY'], algorithm="HS256")
             resp = make_response(redirect(url_for('dashboard')))
-            resp.set_cookie('token', token, httponly=True, samesite='Lax')
+            resp.set_cookie('token', token)
             return resp
         else:
             error = 'Invalid Credentials. Please try again.'
@@ -226,7 +226,7 @@ def forgot_password():
             reset_url = url_for('reset_password', token=token, _external=True)
             with open('uploads/logs3.txt', 'a') as log_file:
                 log_file.write(f"Password reset link for {email}: {reset_url}\n")
-            flash(f'A password reset link has been generated for {email}. Since Mail adapter is not configured it is saved to logs.')
+            flash(f'A password reset link has been generated for {email}. Contact admin@example.com to fetch from logs.')
         else:
             flash(f'If the email {email} exists, a reset link will be sent.')
         # Redirect back to the same page with email parameter in URL
