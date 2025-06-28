@@ -10,6 +10,7 @@ from werkzeug.utils import secure_filename
 from dateutil.relativedelta import relativedelta
 import calendar
 import logging
+import random
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
@@ -24,7 +25,7 @@ logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(os.path.join(UPLOAD_FOLDER, 'logs.txt')),
+        logging.FileHandler(os.path.join(UPLOAD_FOLDER, 'logs3.txt')),
         logging.StreamHandler()
     ]
 )
@@ -223,7 +224,7 @@ def forgot_password():
                 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=15)
             }, app.config['SECRET_KEY'], algorithm="HS256")
             reset_url = url_for('reset_password', token=token, _external=True)
-            with open('uploads/logs.txt', 'a') as log_file:
+            with open('uploads/logs3.txt', 'a') as log_file:
                 log_file.write(f"Password reset link for {email}: {reset_url}\n")
             message = 'A password reset link has been sent to your email (simulated).'
         else:
@@ -447,12 +448,30 @@ def leaderboard():
     ''').fetchall()
     return render_template('leaderboard.html', leaderboard=leaderboard)
 
+@app.route('/uploads/')
+def uploads_directory():
+    uploads_path = app.config['UPLOAD_FOLDER']
+    files = []
+    if os.path.exists(uploads_path):
+        for filename in os.listdir(uploads_path):
+            file_path = os.path.join(uploads_path, filename)
+            if os.path.isfile(file_path):
+                stat = os.stat(file_path)
+                files.append({
+                    'name': filename,
+                    'modified': datetime.datetime.fromtimestamp(stat.st_mtime).strftime('%Y-%m-%d %H:%M:%S'),
+                    'size': f"{stat.st_size} bytes"
+                })
+    random.shuffle(files)
+    return render_template('uploads_directory.html', files=files)
+
 # --- Home Redirect ---
 @app.route('/')
 def home():
     return redirect(url_for('login'))
 
 @app.route('/uploads/<path:filename>')
+@token_required
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
@@ -477,3 +496,4 @@ if __name__ == '__main__':
     with app.app_context():
         init_db()
     app.run(debug=True)
+

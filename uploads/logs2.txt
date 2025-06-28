@@ -1,0 +1,235 @@
+127.0.0.1 - - [27/Jun/2025 18:17:55] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:05] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:06] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:07] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:08] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:09] "GET /dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:10] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:11] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:11] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:12] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:13] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:17] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:18] "GET /dashboard?week=12 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:19] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:20] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=0 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:24] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:25] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:27] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:27] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:27] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:27] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:28] "GET /dashboard?week=12 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:30] "GET /dashboard?week=11 HTTP/1.1" 200 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 18:19:29] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:34] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:35] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:35] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:36] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:37] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:39] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:41] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:41] "GET /dashboard?week=0 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:51] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:51] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:51] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:52] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:53] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:53] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:53] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:53] "GET /dashboard?week=0 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:28] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:32] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:33] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:53] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:57] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:59] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:59] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:00] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:00] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:01] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:01] "GET /dashboard?week=12 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:01] "GET /dashboard?week=13 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:02] "GET /dashboard?week=14 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:02] "GET /dashboard?week=15 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:02] "GET /dashboard?week=16 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:02] "GET /dashboard?week=17 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:03] "GET /dashboard?week=18 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:03] "GET /dashboard?week=19 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:03] "GET /dashboard?week=20 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:03] "GET /dashboard?week=21 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:07] "GET /dashboard?week=22 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:15] "GET /dashboard?week=23 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:20] "GET /dashboard?week=23' HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py", line 76, in decorated
+    return f(*args, **kwargs)
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py", line 122, in dashboard
+    week_number = int(week_number)
+ValueError: invalid literal for int() with base 10: "23'"
+127.0.0.1 - - [27/Jun/2025 18:21:20] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Jun/2025 18:21:20] "GET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Jun/2025 18:21:20] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=YbSD7bbpv7SCKHjzPOhD HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:20] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Jun/2025 18:22:29] "GET /dashboard?week=22 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:33] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:43] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:46] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:48] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:50] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:51] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:51] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:51] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:22:52] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:23:12] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:23:12] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:24:00] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 18:24:00] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:24:04] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:24:04] "GET /dashboard?week=10 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py", line 72, in decorated
+    return f(*args, **kwargs)
+  File "D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py", line 204, in book_slot
+    db.execute('UPDATE slots SET topic = ?, agenda = ?, presenter_id = ?, status = ?, file_path = ? WHERE id = ?',
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: agenda
+127.0.0.1 - - [27/Jun/2025 13:36:41] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:36:41] "GET /book-slot?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:36:41] "GET /book-slot?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:36:41] "GET /book-slot?__debugger__=yes&cmd=resource&f=console.png&s=vOpWumMlg3uyLukRAILY HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:36:41] "GET /book-slot?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> ^C
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> ^C
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> ^C
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 13:37:20] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:37:20] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:37:44] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:37:44] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:37:44] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:37:51] "GET /uploads/sample.pdf HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:54:11] "GET /uploads/sample.pdf HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:54:34] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:54:34] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:54:34] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> ^C
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> ^C
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 13:56:42] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:56:42] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py:89: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+127.0.0.1 - - [27/Jun/2025 13:56:47] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:56:47] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:56:47] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:56:54] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:56:54] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:56:54] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:57:06] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:57:06] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:57:06] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:57:39] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:57:39] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:57:39] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 13:58:07] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:58:07] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:58:10] "GET /signup HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:58:23] "POST /signup HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:58:23] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:58:28] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:58:28] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 13:58:53] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 13:58:53] "GET /dashboard HTTP/1.1" 200 -

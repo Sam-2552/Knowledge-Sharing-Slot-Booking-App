@@ -1,0 +1,313 @@
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> ^C
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> ^C
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 19:36:15] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:36:15] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:17] "GET /login HTTP/1.1" 200 -
+D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py:106: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+127.0.0.1 - - [27/Jun/2025 19:36:22] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:36:22] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:36:22] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:26] "GET /admin-dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:27] "GET /admin-dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:27] "GET /admin-dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:28] "GET /admin-dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:28] "GET /admin-dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:28] "GET /admin-dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:28] "GET /admin-dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:28] "GET /admin-dashboard?week=0 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:29] "GET /admin-dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:30] "GET /admin-dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:30] "GET /admin-dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:30] "GET /admin-dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:30] "GET /admin-dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:30] "GET /admin-dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:31] "GET /admin-dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:31] "GET /admin-dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:31] "GET /admin-dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:32] "GET /admin-dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:32] "GET /admin-dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:32] "GET /admin-dashboard?week=12 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:32] "GET /admin-dashboard?week=13 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:33] "GET /admin-dashboard?week=14 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:33] "GET /admin-dashboard?week=15 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:33] "GET /admin-dashboard?week=16 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:33] "GET /admin-dashboard?week=17 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:36] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:38] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:36:38] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:36:46] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:36:46] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:37:32] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:36:46] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:37:32] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:37:32] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:37:32] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:37:32] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:05] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:05] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:07] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:37:32] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:05] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:05] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:07] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:05] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:05] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:07] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:20] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:39] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:20] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:39] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:11] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:20] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:39] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:38:39] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:44] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:48] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:11] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:39:11] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:39] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:44] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:38:48] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:11] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:39:11] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:11] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:16] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:31] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:39:16] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:31] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:39:31] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:39:31] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:39] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:40] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:39:40] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:42] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:39:59] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:40:03] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:41:11] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:41:31] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:41:31] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:41:33] "GET /my-activity HTTP/1.1" 200 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 19:47:08] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:47:10] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:47:27] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:47:27] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:47:37] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:47:43] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:47:43] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:47:45] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:47:46] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:47:46] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:47:49] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:18] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:48:18] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:21] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:30] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:48:30] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:33] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:49] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:51] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:50:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:18] "POST /book-slot HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:48:18] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:21] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:30] "POST /admin-slot-action HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 19:48:30] "GET /admin-dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:33] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:49] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:48:51] "GET /my-activity HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:50:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:58:44] "GET /my-activity HTTP/1.1" 200 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 19:59:44] "GET /uploads/harvest.jpeg HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 19:59:49] "GET /uploads/Hello_sensitive.pdf HTTP/1.1" 200 -2025-06-28 09:34:54,397 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:34:54,408 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:35:17,757 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:35:18,827 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:35:18,837 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:35:22,935 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:35:24,069 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:35:24,078 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:35:42,272 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:35:42] "[32mGET /admin-dashboard?week=7' HTTP/1.1[0m" 302 -
+2025-06-28 09:35:42,304 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:35:42] "GET /login HTTP/1.1" 200 -
+2025-06-28 09:35:49,277 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:35:49] "POST /login HTTP/1.1" 200 -
+2025-06-28 09:35:55,959 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:35:55] "POST /login HTTP/1.1" 200 -
+2025-06-28 09:36:02,648 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:02] "POST /login HTTP/1.1" 200 -
+2025-06-28 09:36:10,649 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-28 09:36:10,662 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:10] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 09:36:10,810 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:10] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 09:36:15,400 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:15] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 09:36:16,397 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:16] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 09:36:22,856 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:22] "GET /admin-dashboard?week=1 HTTP/1.1" 200 -
+2025-06-28 09:36:24,045 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:24] "GET /admin-dashboard?week=2 HTTP/1.1" 200 -
+2025-06-28 09:36:24,881 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:24] "GET /admin-dashboard?week=3 HTTP/1.1" 200 -
+2025-06-28 09:36:25,477 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:25] "GET /admin-dashboard?week=4 HTTP/1.1" 200 -
+2025-06-28 09:36:25,953 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:25] "GET /admin-dashboard?week=5 HTTP/1.1" 200 -
+2025-06-28 09:36:26,261 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:26] "GET /admin-dashboard?week=6 HTTP/1.1" 200 -
+2025-06-28 09:36:26,496 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:26] "GET /admin-dashboard?week=7 HTTP/1.1" 200 -
+2025-06-28 09:36:26,774 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:26] "GET /admin-dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 09:36:27,066 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:27] "GET /admin-dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 09:36:28,426 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:28] "GET /admin-dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 09:36:29,374 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:29] "GET /admin-dashboard?week=7 HTTP/1.1" 200 -
+2025-06-28 09:36:30,821 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:30] "GET /admin-dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 09:36:35,782 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:35] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 09:36:39,436 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:39] "GET /leaderboard HTTP/1.1" 200 -
+2025-06-28 09:36:41,084 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:41] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 09:36:42,709 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:42] "GET /leaderboard HTTP/1.1" 200 -
+2025-06-28 09:36:43,812 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:43] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 09:36:49,982 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:49] "GET /leaderboard HTTP/1.1" 200 -
+2025-06-28 09:36:51,057 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:51] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 09:36:51,083 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:51] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 09:36:54,563 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:54] "GET /admin-dashboard?week=1 HTTP/1.1" 200 -
+2025-06-28 09:36:54,798 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:54] "GET /admin-dashboard?week=2 HTTP/1.1" 200 -
+2025-06-28 09:36:55,226 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:55] "GET /admin-dashboard?week=3 HTTP/1.1" 200 -
+2025-06-28 09:36:55,414 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:55] "GET /admin-dashboard?week=4 HTTP/1.1" 200 -
+2025-06-28 09:36:55,846 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:55] "GET /admin-dashboard?week=5 HTTP/1.1" 200 -
+2025-06-28 09:36:56,581 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:56] "GET /admin-dashboard?week=6 HTTP/1.1" 200 -
+2025-06-28 09:36:57,187 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:57] "GET /admin-dashboard?week=7 HTTP/1.1" 200 -
+2025-06-28 09:36:57,770 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:57] "GET /admin-dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 09:36:58,281 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:36:58] "GET /admin-dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 09:37:00,097 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:00] "GET /admin-dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 09:37:12,204 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:12] "[32mPOST /admin-slot-action HTTP/1.1[0m" 302 -
+2025-06-28 09:37:12,240 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:12] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 09:37:14,973 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:14] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 09:37:21,289 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:21] "GET /admin-feedback/3 HTTP/1.1" 200 -
+2025-06-28 09:37:44,128 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:44] "[32mPOST /admin-feedback/3 HTTP/1.1[0m" 302 -
+2025-06-28 09:37:44,146 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:44] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 09:37:46,498 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:46] "GET /leaderboard HTTP/1.1" 200 -
+2025-06-28 09:37:52,594 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:52] "[32mGET /admin-feedback/3 HTTP/1.1[0m" 302 -
+2025-06-28 09:37:57,315 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:37:57] "[36mGET /uploads/sample.pdf HTTP/1.1[0m" 304 -
+2025-06-28 09:38:09,496 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:09] "GET /uploads/logs.txt HTTP/1.1" 200 -
+2025-06-28 09:38:49,708 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:49] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 09:38:49,741 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:49] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 09:38:52,355 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:52] "GET /admin-dashboard?week=1 HTTP/1.1" 200 -
+2025-06-28 09:38:55,186 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:55] "[35m[1mGET /admin-dashboard?week=1' HTTP/1.1[0m" 500 -
+2025-06-28 09:38:55,282 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:55] "[36mGET /admin-dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-28 09:38:55,291 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:55] "[36mGET /admin-dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-28 09:38:55,332 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:55] "GET /admin-dashboard?__debugger__=yes&cmd=resource&f=console.png&s=Qnn36hDS7ZH1OcG9bBQs HTTP/1.1" 200 -
+2025-06-28 09:38:55,383 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:38:55] "[36mGET /admin-dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-28 09:39:07,950 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:39:07] "GET /uploads/logs.txt HTTP/1.1" 200 -
+2025-06-28 09:40:09,864 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:40:10,992 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:40:10,998 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:40:12,054 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:40:13,037 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:40:13,044 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:40:14,107 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:40:15,273 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:40:15,284 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:40:26,315 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:40:26] "GET /uploads/logs.txt HTTP/1.1" 200 -
+2025-06-28 09:40:35,392 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:40:35] "[35m[1mGET /admin-dashboard?week=1' HTTP/1.1[0m" 500 -
+2025-06-28 09:40:35,479 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:40:35] "[36mGET /admin-dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-28 09:40:35,490 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:40:35] "[36mGET /admin-dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-28 09:40:35,524 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:40:35] "GET /admin-dashboard?__debugger__=yes&cmd=resource&f=console.png&s=LFdMSVULciaqllMcUBbC HTTP/1.1" 200 -
+2025-06-28 09:40:37,570 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:40:37] "GET /uploads/logs.txt HTTP/1.1" 200 -
+2025-06-28 09:41:23,288 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:41:24,817 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:41:24,835 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:42:54,036 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:42:55,124 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:42:55,131 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:43:01,230 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:43:02,632 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:43:02,643 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:43:24,984 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:43:26,195 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:43:26,204 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:43:31,678 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:43:31] "[32mGET /uploads HTTP/1.1[0m" 308 -
+2025-06-28 09:43:31,713 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:43:31] "[35m[1mGET /uploads/ HTTP/1.1[0m" 500 -
+2025-06-28 09:43:32,034 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:43:32] "GET /uploads/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-28 09:43:32,039 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:43:32] "GET /uploads/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-28 09:43:32,101 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:43:32] "GET /uploads/?__debugger__=yes&cmd=resource&f=console.png&s=RA6xjtAkX2cG52IIRUl1 HTTP/1.1" 200 -
+2025-06-28 09:43:32,141 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:43:32] "GET /uploads/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-28 09:44:07,807 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:44:09,327 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:44:09,335 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:44:09,385 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:44:09] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 09:45:03,021 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:45:04,160 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:45:04,169 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:45:05,230 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:45:06,209 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:45:06,219 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:45:11,809 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:45:11] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 09:46:18,307 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:46:19,304 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:46:19,312 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:46:24,418 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:46:25,298 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:46:25,304 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:46:29,403 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:46:30,368 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:46:30,374 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:46:37,482 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:46:38,984 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:46:38,993 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:46:39,249 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:46:39] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 09:46:51,021 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:46:51] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 09:46:55,488 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:46:55] "GET /uploads/Circle_cam1.png HTTP/1.1" 200 -
+2025-06-28 09:47:00,164 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-28 09:47:00,189 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:00] "GET /login HTTP/1.1" 200 -
+2025-06-28 09:47:03,390 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:03] "[36mGET /uploads/Circle_cam1.png HTTP/1.1[0m" 304 -
+2025-06-28 09:47:08,842 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:08] "GET /uploads/logs.txt HTTP/1.1" 200 -
+2025-06-28 09:47:26,838 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 09:47:30,106 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 09:47:30,122 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 09:47:30,219 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:30] "[32mGET /uploads/logs.txt HTTP/1.1[0m" 302 -
+2025-06-28 09:47:30,235 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:30] "GET /login HTTP/1.1" 200 -
+2025-06-28 09:47:37,697 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:37] "[32mGET /uploads/Circle_cam1.png HTTP/1.1[0m" 302 -
+2025-06-28 09:47:37,710 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:37] "GET /login HTTP/1.1" 200 -
+2025-06-28 09:47:43,613 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:43] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 09:47:44,563 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:44] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 09:47:46,610 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:46] "[32mGET /uploads/Circle_cam1.png HTTP/1.1[0m" 302 -
+2025-06-28 09:47:46,620 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:46] "GET /login HTTP/1.1" 200 -
+2025-06-28 09:47:49,823 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:49] "[32mGET /uploads/logs.txt HTTP/1.1[0m" 302 -
+2025-06-28 09:47:49,835 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:47:49] "GET /login HTTP/1.1" 200 -
+2025-06-28 09:48:13,198 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:48:13] "POST /login HTTP/1.1" 200 -
+2025-06-28 09:48:19,640 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:48:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-28 09:48:19,653 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:48:19] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 09:48:19,811 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:48:19] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 09:48:22,713 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:48:22] "[36mGET /uploads/harvest.jpeg HTTP/1.1[0m" 304 -
+2025-06-28 09:48:26,212 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 09:48:26] "GET /uploads/logs.txt HTTP/1.1" 200 -

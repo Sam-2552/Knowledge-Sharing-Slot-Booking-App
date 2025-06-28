@@ -1,0 +1,262 @@
+PS D:\Github\Knowledge-Sharing-Slot-Booking-App> .\.venv\Scripts\activate
+(Knowledge-Sharing-Slot-Booking-App) PS D:\Github\Knowledge-Sharing-Slot-Booking-App> python .\app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 17:59:52] "GET / HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 17:59:52] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 17:59:52] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 17:59:53] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 17:59:53] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/Jun/2025 18:00:09] "POST /login HTTP/1.1" 200 -
+D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py:89: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+127.0.0.1 - - [27/Jun/2025 18:00:21] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jun/2025 18:00:21] "GET /dashboard HTTP/1.1" 200 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading      
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 18:12:41] "GET /dashboard HTTP/1.1" 200 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 18:14:02] "GET /dashboard HTTP/1.1" 200 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 18:16:09] "GET /dashboard HTTP/1.1" 200 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 18:17:55] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:05] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:06] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:07] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:08] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:09] "GET /dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:10] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:11] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:11] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:12] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:13] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:17] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:18] "GET /dashboard?week=12 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:19] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:20] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:21] "GET /dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:22] "GET /dashboard?week=0 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:24] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:25] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:26] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:27] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:27] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:27] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:27] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:28] "GET /dashboard?week=12 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:18:30] "GET /dashboard?week=11 HTTP/1.1" 200 -
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+ * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-442-464
+127.0.0.1 - - [27/Jun/2025 18:19:29] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:34] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:35] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:35] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:36] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:37] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:39] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=5 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:40] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:41] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:41] "GET /dashboard?week=0 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:51] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:51] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:51] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:52] "GET /dashboard?week=4 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:53] "GET /dashboard?week=3 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:53] "GET /dashboard?week=2 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:53] "GET /dashboard?week=1 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:19:53] "GET /dashboard?week=0 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:28] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:32] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:33] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:53] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:57] "GET /dashboard?week=6 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:59] "GET /dashboard?week=7 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:20:59] "GET /dashboard?week=8 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:00] "GET /dashboard?week=9 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:00] "GET /dashboard?week=10 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:01] "GET /dashboard?week=11 HTTP/1.1" 200 -
+127.0.0.1 - - [27/Jun/2025 18:21:01] "GET /dashboard?week=12 HTTP/1.1" 200 -
+2025-06-28 10:05:33,690 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 10:05:33,697 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 10:08:50,606 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:08:50] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:08:50,761 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:08:50] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:08:50,771 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:08:50] "GET /static/js/password.js HTTP/1.1" 200 -
+2025-06-28 10:09:24,268 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 10:09:25,297 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 10:09:25,304 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 10:09:30,412 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 10:09:31,309 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 10:09:31,317 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 10:09:35,410 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:35] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:35,581 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:35] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:36,481 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:36] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:36,523 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:36] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:36,741 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:36] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:37,269 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:37] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:37,313 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:37] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:37,334 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:37] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:37,890 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:37] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:37,931 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:37] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:37,959 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:37] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:38,567 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:38] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:38,617 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:38] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:38,642 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:38] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:39,205 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:39] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:39,252 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:39] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:39,281 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:39] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:39,893 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:39] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:39,946 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:39] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:39,964 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:39] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:40,579 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:40] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:40,626 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:40] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:40,650 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:40] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:41,246 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:41] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:41,296 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:41] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:41,315 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:41] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:41,862 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:41] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:41,914 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:41] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:41,959 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:41] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:42,359 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:42] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:09:42,403 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:42] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:09:42,449 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:09:42] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:10:55,602 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:10:55] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:10:55,654 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:10:55] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:03,784 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:03] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:11:03,832 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:03] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:03,857 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:03] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:04,949 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:04] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:11:04,990 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:04] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:05,046 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:05] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:06,031 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:06] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:11:06,072 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:06] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:06,153 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:06] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:07,381 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:07] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:11:07,454 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:07] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:07,476 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:07] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:08,545 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:08] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:11:08,588 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:08] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:11:08,702 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:11:08] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:02,015 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:02] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:02,064 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:02] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:03,586 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:03] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:03,629 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:03] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:03,651 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:03] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:04,086 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:04,129 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:04,182 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:04,459 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:04,517 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:04,533 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:04,729 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:04,768 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:04,790 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:04,980 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:04] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:05,024 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:05,064 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:05,253 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:05,291 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:05,513 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:05,568 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:05,752 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:05,798 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:05,964 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:05] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:06,014 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:06] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:06,213 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:06] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:06,255 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:06] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:06,429 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:06] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:06,473 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:06] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:06,671 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:06] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:06,715 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:06] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:16,774 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:16] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:16,826 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:16] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:12:18,202 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:18] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:12:18,248 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:12:18] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:13:07,278 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:13:07] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:13:07,330 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:13:07] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:13:31,141 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:13:31] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:13:31,361 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:13:31] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:14:01,836 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:01] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:14:01,888 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:01] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:14:09,490 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:09] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:14:09,536 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:09] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:14:16,442 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:16] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:14:16,493 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:16] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:14:24,659 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:24] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:14:24,700 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:24] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:14:31,837 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:31] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:14:31,884 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:14:31] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:15:06,609 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:15:06] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:15:06,656 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:15:06] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:15:15,348 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:15:15] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:15:15,398 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:15:15] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:15:50,825 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:15:50] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:15:50,871 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:15:50] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:16:08,799 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:08] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:16:08,855 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:08] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:16:22,299 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:22] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:16:22,349 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:22] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:16:29,161 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:29] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:16:29,219 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:29] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:16:35,488 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:35] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 10:16:35,535 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:35] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 10:17:04,621 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:17:04] "GET /uploads/pdfxss5.pdf HTTP/1.1" 200 -
