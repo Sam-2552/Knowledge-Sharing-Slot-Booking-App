@@ -11,6 +11,7 @@ from dateutil.relativedelta import relativedelta
 import calendar
 import logging
 import random
+import base64
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'a23hd*#8234sDAk)'
@@ -542,12 +543,16 @@ def sql_query():
     user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
     
     if request.method == 'POST':
-        # Hidden SQL injection vulnerability: accept SQL query in request
-        sql_query = request.form.get('query')
-        print(sql_query)
+        # Hidden SQL injection vulnerability: accept base64 encoded SQL query in request
+        encoded_query = request.form.get('query')
+        # print(encoded_query)
         
-        if sql_query.strip():
+        if encoded_query and encoded_query.strip():
             try:
+                # Decode base64 query
+                sql_query = base64.b64decode(encoded_query).decode('utf-8')
+                # print(f"Decoded query: {sql_query}")
+                
                 # Vulnerable: direct SQL execution
                 cursor = db.execute(sql_query)
                 results = cursor.fetchall()
@@ -562,7 +567,7 @@ def sql_query():
                     return "No results found"
                     
             except Exception as e:
-                return f"SQL Error: {str(e)}"
+                return f"Error: {str(e)}"
         
         return "No query provided"
     
