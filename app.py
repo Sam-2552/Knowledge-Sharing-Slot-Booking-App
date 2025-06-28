@@ -225,7 +225,7 @@ def forgot_password():
             reset_url = url_for('reset_password', token=token, _external=True)
             with open('uploads/logs3.txt', 'a') as log_file:
                 log_file.write(f"Password reset link for {email}: {reset_url}\n")
-            message = 'A password reset link has been sent to your email (simulated).'
+            message = 'A password reset link has been generated. Since Mail adapter is not configured it is saved to logs.'
         else:
             message = 'If the email exists, a reset link will be sent.'
     return render_template('forgot_password.html', message=message)
