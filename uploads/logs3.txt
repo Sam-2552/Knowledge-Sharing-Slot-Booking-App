@@ -1,7 +1,0 @@
-2025-06-28 15:59:03,228 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 15:59:03] "[31m[1mGET /uploads/code?file=../app.py HTTP/1.1[0m" 401 -
-2025-06-28 15:59:06,309 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 15:59:06] "[32mGET /uploads/ HTTP/1.1[0m" 302 -
-2025-06-28 15:59:06,332 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 15:59:06] "GET /uploads/code HTTP/1.1" 200 -
-2025-06-28 15:59:06,709 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 15:59:06] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
-2025-06-28 15:59:09,647 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 15:59:09] "GET /uploads/code HTTP/1.1" 200 -
-2025-06-28 15:59:09,735 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 15:59:09] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
-2025-06-28 15:59:38,339 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 15:59:38] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
