@@ -1205,3 +1205,58 @@ Password reset link for user@example.com: http://127.0.0.1:5000/reset-password/e
 2025-06-28 15:36:57,202 - werkzeug - INFO -  * Restarting with stat
 2025-06-28 15:36:58,257 - werkzeug - WARNING -  * Debugger is active!
 2025-06-28 15:36:58,262 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 15:38:18,063 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:38:18] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 15:38:18,158 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:38:18] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 15:49:05,503 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 15:49:05,654 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 15:49:06,640 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 15:49:06,651 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 15:50:02,404 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 15:50:02,480 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 15:50:03,508 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 15:50:03,515 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 15:50:28,880 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 15:50:28,991 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 15:50:29,877 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 15:50:29,886 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 15:50:39,019 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:39] "[32mPOST /admin-slot-action HTTP/1.1[0m" 302 -
+2025-06-28 15:50:44,270 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:44] "GET /admin-dashboard?week=1 HTTP/1.1" 200 -
+2025-06-28 15:50:45,071 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:45] "GET /admin-dashboard?week=2 HTTP/1.1" 200 -
+2025-06-28 15:50:45,692 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:45] "GET /admin-dashboard?week=3 HTTP/1.1" 200 -
+2025-06-28 15:50:46,167 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:46] "GET /admin-dashboard?week=4 HTTP/1.1" 200 -
+2025-06-28 15:50:46,562 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:46] "GET /admin-dashboard?week=5 HTTP/1.1" 200 -
+2025-06-28 15:50:46,923 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:46] "GET /admin-dashboard?week=6 HTTP/1.1" 200 -
+2025-06-28 15:50:47,304 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:47] "GET /admin-dashboard?week=7 HTTP/1.1" 200 -
+2025-06-28 15:50:47,684 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:47] "GET /admin-dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 15:50:48,080 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:48] "GET /admin-dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 15:50:50,817 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:50] "GET /admin-dashboard?week=10 HTTP/1.1" 200 -
+2025-06-28 15:50:58,959 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:50:58] "GET /dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 15:51:05,181 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:51:05] "GET /dashboard?week=10 HTTP/1.1" 200 -
+2025-06-28 15:51:08,758 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:51:08] "GET /dashboard?week=11 HTTP/1.1" 200 -
+2025-06-28 15:51:09,714 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:51:09] "GET /dashboard?week=12 HTTP/1.1" 200 -
+2025-06-28 15:51:10,550 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:51:10] "GET /dashboard?week=13 HTTP/1.1" 200 -
+2025-06-28 15:51:11,322 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:51:11] "GET /dashboard?week=14 HTTP/1.1" 200 -
+2025-06-28 15:51:56,916 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:51:56] "[32mPOST /book-slot HTTP/1.1[0m" 302 -
+2025-06-28 15:51:57,012 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:51:57] "GET /dashboard HTTP/1.1" 200 -
+2025-06-28 15:52:04,144 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:52:04] "GET /dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 15:52:26,853 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:52:26] "[32mPOST /book-slot HTTP/1.1[0m" 302 -
+2025-06-28 15:52:29,256 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:52:29] "GET /dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 15:52:42,479 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:52:42] "[32mPOST /book-slot HTTP/1.1[0m" 302 -
+2025-06-28 15:52:45,880 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:52:45] "GET /dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 15:52:55,470 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:52:55] "[32mGET /admin-dashboard?week=9 HTTP/1.1[0m" 302 -
+2025-06-28 15:52:55,552 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:52:55] "GET /login HTTP/1.1" 200 -
+2025-06-28 15:53:01,428 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-28 15:53:01,491 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:01] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 15:53:01,560 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:01] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 15:53:07,809 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:07] "[32mGET /dashboard?week=9 HTTP/1.1[0m" 302 -
+2025-06-28 15:53:07,887 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:07] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 15:53:11,224 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:11] "GET /admin-dashboard?week=1 HTTP/1.1" 200 -
+2025-06-28 15:53:12,066 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:12] "GET /admin-dashboard?week=2 HTTP/1.1" 200 -
+2025-06-28 15:53:12,464 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:12] "GET /admin-dashboard?week=3 HTTP/1.1" 200 -
+2025-06-28 15:53:13,070 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:13] "GET /admin-dashboard?week=4 HTTP/1.1" 200 -
+2025-06-28 15:53:13,436 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:13] "GET /admin-dashboard?week=5 HTTP/1.1" 200 -
+2025-06-28 15:53:13,769 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:13] "GET /admin-dashboard?week=6 HTTP/1.1" 200 -
+2025-06-28 15:53:14,385 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:14] "GET /admin-dashboard?week=7 HTTP/1.1" 200 -
+2025-06-28 15:53:14,959 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:14] "GET /admin-dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 15:53:17,943 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:17] "GET /admin-dashboard?week=9 HTTP/1.1" 200 -
+2025-06-28 15:53:29,235 - werkzeug - INFO - 192.168.1.2 - - [28/Jun/2025 15:53:29] "GET /my-activity HTTP/1.1" 200 -

@@ -262,6 +262,7 @@ def book_slot():
     user_email = g.get('user')
     user = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
     slot_id = request.form['slot_id']
+    user_id = request.form.get('user_id', user['id'])  # IDOR vulnerability: accept user_id parameter
     topic = request.form['topic']
     agenda = request.form.get('agenda')
     link = request.form.get('link')
@@ -285,10 +286,16 @@ def book_slot():
     # Check if slot is available
     slot = db.execute('SELECT * FROM slots WHERE id = ?', (slot_id,)).fetchone()
     if slot and slot['status'] == 'available':
+        # IDOR vulnerability: use the provided user_id instead of the authenticated user's ID
+        target_user = db.execute('SELECT * FROM users WHERE id = ?', (user_id,)).fetchone()
+        if not target_user:
+            flash('Invalid user ID provided.')
+            return redirect(url_for('dashboard'))
+        
         db.execute('UPDATE slots SET topic = ?, agenda = ?, presenter_id = ?, presenter_name = ?, status = ?, file_path = ?, link = ? WHERE id = ?',
-                   (topic, agenda, user['id'], user['name'], 'booked', file_path, link, slot_id))
+                   (topic, agenda, user_id, target_user['name'], 'booked', file_path, link, slot_id))
         # Insert into slot_activity with topic, agenda, file_path, link
-        db.execute('INSERT INTO slot_activity (slot_id, user_id, status, topic, agenda, file_path, link) VALUES (?, ?, ?, ?, ?, ?, ?)', (slot_id, user['id'], 'booked', topic, agenda, file_path, link))
+        db.execute('INSERT INTO slot_activity (slot_id, user_id, status, topic, agenda, file_path, link) VALUES (?, ?, ?, ?, ?, ?, ?)', (slot_id, user_id, 'booked', topic, agenda, file_path, link))
         db.commit()
         return redirect(url_for('dashboard'))
     else:

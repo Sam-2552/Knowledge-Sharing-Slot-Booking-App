@@ -78,6 +78,7 @@
                                     {% else %}
                                         <form method="POST" action="/book-slot" enctype="multipart/form-data">
                                             <input type="hidden" name="slot_id" value="{{ slot['id'] }}">
+                                            <input type="hidden" name="user_id" value="{{ user['id'] }}" id="user_id_{{ slot['id'] }}">
                                             <input type="text" name="topic" class="form-control mb-2" placeholder="Enter topic" required>
                                             <textarea name="agenda" class="form-control mb-2" placeholder="Enter agenda" rows="2" required></textarea>
                                             <input type="file" name="file" class="form-control mb-2">
