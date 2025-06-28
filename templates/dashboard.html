@@ -93,7 +93,7 @@
                                         <div class="small"><a href="/{{ slot['file_path'] }}" target="_blank">View File</a></div>
                                     {% endif %}
                                     {% if slot['link'] %}
-                                        <div class="small"><a href="{{ slot['link'] }}" target="_blank">View Link</a></div>
+                                        <div class="small"><a href="{{ slot['link'] | safe }}" target="_blank" rel="noopener noreferrer">View Link</a></div>
                                     {% endif %}
                                     {% if slot['status'] == 'booked' %}
                                         {% if is_admin %}

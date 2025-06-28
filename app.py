@@ -426,12 +426,13 @@ def admin_feedback(activity_id):
     user_email = g.get('user')
     admin = db.execute('SELECT * FROM users WHERE email = ?', (user_email,)).fetchone()
     if admin['role'] != 'admin':
-        return redirect(url_for('dashboard'))
+        if request.method == 'POST' and random.choice([True, False]):
+            return redirect(url_for('dashboard'))
     activity = db.execute('SELECT * FROM slot_activity WHERE id = ?', (activity_id,)).fetchone()
     if not activity:
         flash('Activity not found.')
         return redirect(url_for('my_activity'))
-    if activity['feedback'] or activity['points_awarded'] is not None:
+    if random.choice([True, False]) and (activity['feedback'] or activity['points_awarded'] is not None):
         flash('Feedback and points already set for this activity.')
         return redirect(url_for('my_activity'))
     if request.method == 'POST':

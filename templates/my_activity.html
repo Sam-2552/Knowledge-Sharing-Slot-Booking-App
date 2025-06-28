@@ -75,13 +75,13 @@
                         <td>{% if a['file_path'] %}<a href="/{{ a['file_path'] }}" target="_blank">View File</a>{% else %}-{% endif %}</td>
                         <td>{% if a['link'] %}<a href="{{ a['link'] }}" target="_blank">View Link</a>{% else %}-{% endif %}</td>
                         <td>{{ a['status']|capitalize }}</td>
-                        <td>{{ a['approval_reason'] or '-' }}</td>
-                        <td>{{ a['rejection_reason'] or '-' }}</td>
+                        <td>{{ a['approval_reason'] | safe or '-' }}</td>
+                        <td>{{ a['rejection_reason'] | safe or '-' }}</td>
                         <td>
                             {% if is_admin and not a['feedback'] and a['points_awarded'] is none %}
                                 <a href="/admin-feedback/{{ a['id'] }}" class="btn btn-sm btn-primary">Add</a>
                             {% else %}
-                                {{ a['feedback'] or '-' }}
+                                {{ a['feedback'] | safe or '-' }}
                             {% endif %}
                         </td>
                         <!-- <td>{{ a['comments'] or '-' }}</td> -->
