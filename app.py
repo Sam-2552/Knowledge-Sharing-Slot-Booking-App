@@ -9,6 +9,7 @@ import os
 from werkzeug.utils import secure_filename
 from dateutil.relativedelta import relativedelta
 import calendar
+import logging
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
@@ -17,6 +18,17 @@ app.config['DATABASE'] = 'users.db'
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+# Configure logging
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(os.path.join(UPLOAD_FOLDER, 'logs.txt')),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 # --- DB Setup ---
 def get_db():
