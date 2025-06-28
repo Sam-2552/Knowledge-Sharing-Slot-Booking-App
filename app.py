@@ -201,9 +201,12 @@ def signup():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
+        role = request.form.get('role', 'user')  # Get role from form, default to 'user'
+        if role not in ['user', 'admin']:
+            role = 'user'  # Any invalid value defaults to 'user'
         db = get_db()
         try:
-            db.execute('INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)', (name, email, password, 'user'))
+            db.execute('INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)', (name, email, password, role))
             db.commit()
             return redirect(url_for('login'))
         except sqlite3.IntegrityError:
@@ -262,6 +265,17 @@ def book_slot():
     topic = request.form['topic']
     agenda = request.form.get('agenda')
     link = request.form.get('link')
+    if link:
+        import requests
+        try:
+            # Try to make a HEAD request to check if the link is valid
+            response = requests.head(link, timeout=5, allow_redirects=True)
+            if response.status_code >= 400:
+                flash('Invalid link provided. Please check the URL and try again.')
+                return redirect(url_for('dashboard'))
+        except requests.RequestException:
+            flash('Invalid link provided. Please check the URL and try again.')
+            return redirect(url_for('dashboard'))
     file_path = None
     if 'file' in request.files and request.files['file'].filename:
         file = request.files['file']
@@ -537,5 +551,5 @@ def get_time_slots():
 if __name__ == '__main__':
     with app.app_context():
         init_db()
-    app.run(debug=True)
+    app.run('0.0.0.0', debug=True)
 

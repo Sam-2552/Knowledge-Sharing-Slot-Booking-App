@@ -745,3 +745,65 @@ Password reset link for user@example.com: http://127.0.0.1:5000/reset-password/e
 2025-06-28 13:28:27,142 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
 2025-06-28 13:28:28,347 - werkzeug - WARNING -  * Debugger is active!
 2025-06-28 13:28:28,352 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 13:56:03,146 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-28 13:56:03,147 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-28 13:56:03,149 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 13:56:03,864 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 13:56:03,871 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 13:56:43,910 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:56:43] "GET /forgot-password?email="><script>alert(document.cookie)</script> HTTP/1.1" 200 -
+2025-06-28 13:56:53,115 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 13:56:53] "GET /dashboard?week=8 HTTP/1.1" 200 -
+2025-06-28 14:02:36,819 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 14:02:36,875 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 14:02:37,454 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 14:02:37,458 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 14:04:56,358 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 14:04:56,426 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 14:04:57,255 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 14:04:57,262 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 14:05:00,567 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 14:05:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-28 14:05:00,585 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 14:05:00] "GET /login HTTP/1.1" 200 -
+2025-06-28 14:05:02,127 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 14:05:02] "GET /signup HTTP/1.1" 200 -
+2025-06-28 14:05:05,235 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 14:05:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-28 14:06:11,911 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 14:06:11] "GET /signup HTTP/1.1" 200 -
+2025-06-28 14:06:12,364 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 14:06:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-28 14:06:31,088 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 14:06:31] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-06-28 14:06:31,109 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 14:06:31] "GET /login HTTP/1.1" 200 -
+2025-06-28 14:07:09,886 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-28 14:07:09,887 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-28 14:07:09,888 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 14:07:10,580 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 14:07:10,589 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 14:07:32,815 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 14:07:32,897 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 14:07:33,973 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 14:07:33,980 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 14:07:40,558 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.188:5000
+2025-06-28 14:07:40,558 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-28 14:07:40,560 - werkzeug - INFO -  * Restarting with stat
+2025-06-28 14:07:41,191 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 14:07:41,198 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 14:07:50,945 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:07:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-28 14:07:51,031 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:07:51] "GET /login HTTP/1.1" 200 -
+2025-06-28 14:07:52,068 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:07:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-28 14:07:54,465 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:07:54] "GET /signup HTTP/1.1" 200 -
+2025-06-28 14:08:50,707 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:08:50] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-06-28 14:08:52,279 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:08:52] "GET /login HTTP/1.1" 200 -
+2025-06-28 14:09:00,088 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:00] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-28 14:09:00,162 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:00] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 14:09:00,269 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:00] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 14:09:03,190 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:03] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 14:09:08,812 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:08] "GET /leaderboard HTTP/1.1" 200 -
+2025-06-28 14:09:10,116 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:10] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 14:09:10,194 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:10] "GET /admin-dashboard HTTP/1.1" 200 -
+2025-06-28 14:09:14,699 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:14] "GET /my-activity HTTP/1.1" 200 -
+2025-06-28 14:09:17,046 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:09:17] "GET /leaderboard HTTP/1.1" 200 -
+2025-06-28 14:10:19,477 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:10:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-28 14:10:19,529 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:10:19] "GET /login HTTP/1.1" 200 -
+2025-06-28 14:10:21,985 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:10:21] "GET /signup HTTP/1.1" 200 -
+2025-06-28 14:10:34,666 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:10:34] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-06-28 14:10:34,722 - werkzeug - INFO - 192.168.31.188 - - [28/Jun/2025 14:10:34] "GET /login HTTP/1.1" 200 -
