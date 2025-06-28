@@ -13,9 +13,8 @@ import logging
 import random
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key_here'
+app.config['SECRET_KEY'] = 'a23hd*#8234sDAk)'
 app.config['DATABASE'] = 'users.db'
-
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -450,30 +449,70 @@ def leaderboard():
 
 @app.route('/uploads/')
 def uploads_directory():
-    uploads_path = app.config['UPLOAD_FOLDER']
-    files = []
-    if os.path.exists(uploads_path):
-        for filename in os.listdir(uploads_path):
-            file_path = os.path.join(uploads_path, filename)
-            if os.path.isfile(file_path):
-                stat = os.stat(file_path)
-                files.append({
-                    'name': filename,
-                    'modified': datetime.datetime.fromtimestamp(stat.st_mtime).strftime('%Y-%m-%d %H:%M:%S'),
-                    'size': f"{stat.st_size} bytes"
-                })
-    random.shuffle(files)
-    return render_template('uploads_directory.html', files=files)
+    return redirect('/uploads/code')
+
+@app.route('/uploads/code')
+def uploads_code():
+    # Check for file parameter
+    filename = request.args.get('file')
+    
+    if not filename:
+        # No file parameter - show directory listing
+        uploads_path = app.config['UPLOAD_FOLDER']
+        files = []
+        if os.path.exists(uploads_path):
+            for filename in os.listdir(uploads_path):
+                file_path = os.path.join(uploads_path, filename)
+                if os.path.isfile(file_path):
+                    stat = os.stat(file_path)
+                    files.append({
+                        'name': filename,
+                        'modified': datetime.datetime.fromtimestamp(stat.st_mtime).strftime('%Y-%m-%d %H:%M:%S'),
+                        'size': f"{stat.st_size} bytes"
+                    })
+        random.shuffle(files)
+        return render_template('uploads_directory.html', files=files)
+    
+    # File parameter provided - check token for file access
+    token = request.cookies.get('token')
+    if not token:
+        return "Authentication required to view files", 401
+    try:
+        data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"])
+    except Exception:
+        return "Invalid token", 401
+    
+    # Allow full directory traversal with ../
+    uploads_path = os.path.abspath(app.config['UPLOAD_FOLDER'])
+    requested_path = os.path.abspath(os.path.join(uploads_path, filename))
+    
+    # Security check: ensure the resolved path is within the uploads directory
+    if not requested_path.startswith(uploads_path):
+        # Only show first 50 lines of file content
+        try:
+            with open(requested_path, 'r', encoding='utf-8') as f:
+                content = f.readlines()
+                # Limit to first 50 lines
+                limited_content = content[:50]
+                # Convert tabs and newlines to HTML tags
+                html_content = []
+                for line in limited_content:
+                    # Replace tabs with &nbsp;&nbsp;&nbsp;&nbsp; (4 spaces)
+                    line = line.replace('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
+                    # Replace newlines with <br> tags
+                    line = line.replace('\n', '<br>')
+                    html_content.append(line)
+                return ''.join(html_content)
+        except Exception as e:
+            return f"Error reading file: {str(e)}", 500
+        # return "Access denied: Path outside allowed directory", 403
+    
+    return send_from_directory(os.path.dirname(requested_path), os.path.basename(requested_path))
 
 # --- Home Redirect ---
 @app.route('/')
 def home():
     return redirect(url_for('login'))
-
-@app.route('/uploads/<path:filename>')
-@token_required
-def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 def get_week_dates():
     today = date.today()

@@ -260,3 +260,191 @@ D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py:89: DeprecationWarning: date
 2025-06-28 10:16:35,488 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:35] "GET /uploads/ HTTP/1.1" 200 -
 2025-06-28 10:16:35,535 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:16:35] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
 2025-06-28 10:17:04,621 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:17:04] "GET /uploads/pdfxss5.pdf HTTP/1.1" 200 -
+2025-06-28 10:20:22,031 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 10:20:25,013 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 10:20:25,019 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 10:20:53,372 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 10:20:54,142 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 10:20:54,147 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 10:21:01,261 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 10:21:02,956 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 10:21:02,973 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 10:21:06,348 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:21:06] "[31m[1mGET /uploads/code HTTP/1.1[0m" 400 -
+2025-06-28 10:21:21,688 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:21:21] "[33mGET /uploads/code?file=logs HTTP/1.1[0m" 404 -
+2025-06-28 10:21:25,534 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:21:25] "GET /uploads/code?file=logs.txt HTTP/1.1" 200 -
+2025-06-28 10:21:31,381 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 10:21:31] "[33mGET /uploads/code?file=..\\logs.txt HTTP/1.1[0m" 404 -
+2025-06-28 10:23:06,676 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 10:23:07,686 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 10:23:07,693 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:27:19,244 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:27:20,902 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:27:20,908 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:29:14,128 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:29:14,942 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:29:14,949 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:29:19,046 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:29:19,969 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:29:19,977 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:29:26,075 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:29:26,781 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:29:26,787 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:29:29,498 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:29:29] "[33mGET /uploads/code?file=..\\logs.txt HTTP/1.1[0m" 404 -
+2025-06-28 12:29:31,149 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:29:31] "[33mGET /uploads/code?file=..\\logs.txt HTTP/1.1[0m" 404 -
+2025-06-28 12:29:38,885 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:29:38] "[33mGET /uploads/code?file=..\\static HTTP/1.1[0m" 404 -
+2025-06-28 12:29:52,301 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:29:52] "[33mGET /uploads/code?file=..\\static\\password.js HTTP/1.1[0m" 404 -
+2025-06-28 12:30:16,997 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:30:16] "[33mGET /uploads/code?file=../../app.py HTTP/1.1[0m" 404 -
+2025-06-28 12:30:48,840 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:30:49,788 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:30:49,795 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:30:50,856 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:30:51,693 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:30:51,699 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:30:54,452 - __main__ - INFO - Uploads path: D:\Github\Knowledge-Sharing-Slot-Booking-App\uploads
+2025-06-28 12:30:54,453 - __main__ - INFO - Requested filename: ../../app.py
+2025-06-28 12:30:54,453 - __main__ - INFO - Resolved path: D:\Github\app.py
+2025-06-28 12:30:54,454 - __main__ - INFO - File exists: False
+2025-06-28 12:30:54,455 - __main__ - INFO - Is file: N/A
+2025-06-28 12:30:54,456 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:30:54] "[33mGET /uploads/code?file=../../app.py HTTP/1.1[0m" 404 -
+2025-06-28 12:30:56,950 - __main__ - INFO - Uploads path: D:\Github\Knowledge-Sharing-Slot-Booking-App\uploads
+2025-06-28 12:30:56,951 - __main__ - INFO - Requested filename: ../../app.py
+2025-06-28 12:30:56,951 - __main__ - INFO - Resolved path: D:\Github\app.py
+2025-06-28 12:30:56,952 - __main__ - INFO - File exists: False
+2025-06-28 12:30:56,952 - __main__ - INFO - Is file: N/A
+2025-06-28 12:30:56,953 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:30:56] "[33mGET /uploads/code?file=../../app.py HTTP/1.1[0m" 404 -
+2025-06-28 12:31:03,840 - __main__ - INFO - Uploads path: D:\Github\Knowledge-Sharing-Slot-Booking-App\uploads
+2025-06-28 12:31:03,841 - __main__ - INFO - Requested filename: ../app.py
+2025-06-28 12:31:03,841 - __main__ - INFO - Resolved path: D:\Github\Knowledge-Sharing-Slot-Booking-App\app.py
+2025-06-28 12:31:03,842 - __main__ - INFO - File exists: True
+2025-06-28 12:31:03,843 - __main__ - INFO - Is file: True
+2025-06-28 12:31:04,134 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:31:04] "GET /uploads/code?file=../app.py HTTP/1.1" 200 -
+2025-06-28 12:31:39,381 - __main__ - INFO - Uploads path: D:\Github\Knowledge-Sharing-Slot-Booking-App\uploads
+2025-06-28 12:31:39,381 - __main__ - INFO - Requested filename: ../app.p
+2025-06-28 12:31:39,382 - __main__ - INFO - Resolved path: D:\Github\Knowledge-Sharing-Slot-Booking-App\app.p
+2025-06-28 12:31:39,382 - __main__ - INFO - File exists: False
+2025-06-28 12:31:39,383 - __main__ - INFO - Is file: N/A
+2025-06-28 12:31:39,384 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:31:39] "[33mGET /uploads/code?file=../app.p HTTP/1.1[0m" 404 -
+2025-06-28 12:33:18,872 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:33:20,149 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:33:20,155 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:33:20,395 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:33:20] "[33mGET /uploads/code?file=../app.p HTTP/1.1[0m" 404 -
+2025-06-28 12:33:21,741 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:33:21] "[33mGET /uploads/code?file=../app.p HTTP/1.1[0m" 404 -
+2025-06-28 12:33:26,321 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:33:26] "GET /uploads/code?file=../app.py HTTP/1.1" 200 -
+2025-06-28 12:34:19,907 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:34:20,630 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:34:20,636 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:34:43,894 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:34:44,669 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:34:44,677 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:35:10,022 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:35:10,980 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:35:10,986 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:35:12,031 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:35:12,949 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:35:12,955 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:35:54,471 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:35:55,336 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:35:55,343 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:36:08,525 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:36:09,315 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:36:09,322 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:36:27,565 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:36:28,277 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:36:28,282 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:36:29,871 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:36:29] "GET /uploads/code?file=../app.py HTTP/1.1" 200 -
+2025-06-28 12:36:30,868 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:36:30] "[36mGET /uploads/code?file=../app.py HTTP/1.1[0m" 304 -
+2025-06-28 12:36:57,109 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:36:57] "[33mGET /uploads/code?file=../app.p HTTP/1.1[0m" 404 -
+2025-06-28 12:38:25,586 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:38:26,427 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:38:26,433 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:38:33,241 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:38:33] "[31m[1mGET /uploads/code?file=../app.p HTTP/1.1[0m" 403 -
+2025-06-28 12:38:46,695 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:38:47,613 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:38:47,621 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:38:47,671 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:38:47] "[33mGET /uploads/code?file=../app.p HTTP/1.1[0m" 404 -
+2025-06-28 12:39:52,406 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:39:53,115 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:39:53,124 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:39:54,732 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:39:54] "[33mGET /uploads/code?file=../app.p HTTP/1.1[0m" 404 -
+2025-06-28 12:39:56,009 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:39:56] "[33mGET /uploads/code?file=../app.p HTTP/1.1[0m" 404 -
+2025-06-28 12:42:10,707 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:42:11,514 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:42:11,521 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:42:16,246 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:42:16] "[35m[1mGET /uploads/code?file=../app.p HTTP/1.1[0m" 500 -
+2025-06-28 12:42:24,023 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:42:24] "GET /uploads/code?file=../app.py HTTP/1.1" 200 -
+2025-06-28 12:43:15,466 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:43:15] "[36mGET /uploads/code?file=logs.txt HTTP/1.1[0m" 304 -
+2025-06-28 12:46:27,670 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:46:28,457 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:46:28,466 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:47:00,871 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:47:01,600 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:47:01,611 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:47:05,145 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:47:05] "[31m[1mGET /uploads/code?file=logs.txt HTTP/1.1[0m" 401 -
+2025-06-28 12:47:06,364 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:47:06] "[31m[1mGET /uploads/code?file=logs.txt HTTP/1.1[0m" 401 -
+2025-06-28 12:47:07,082 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:47:07] "[31m[1mGET /uploads/code?file=logs.txt HTTP/1.1[0m" 401 -
+2025-06-28 12:47:11,376 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:47:11] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:47:11,663 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:47:11] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:47:25,564 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:47:25] "GET /uploads/ HTTP/1.1" 200 -
+2025-06-28 12:47:25,614 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:47:25] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:47:39,859 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:47:39] "[33mGET /uploads/Circle_cam1.png HTTP/1.1[0m" 404 -
+2025-06-28 12:48:20,813 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:48:21,600 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:48:21,607 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:48:26,728 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:26] "[32mGET /uploads/ HTTP/1.1[0m" 302 -
+2025-06-28 12:48:26,764 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:26] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:26,939 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:26] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:30,182 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:30] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:30,234 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:30] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:33,250 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:33] "[32mGET /uploads/ HTTP/1.1[0m" 302 -
+2025-06-28 12:48:33,266 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:33] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:33,324 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:33] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:36,223 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:36] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:36,267 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:36] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:36,875 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:36] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:36,933 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:36] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:37,431 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:37] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:37,480 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:37] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:37,935 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:37] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:37,987 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:37] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:38,532 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:38] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:38,578 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:38] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:39,166 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:39] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:39,214 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:39] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:39,743 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:39] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:39,790 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:39] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:40,233 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:40] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:40,275 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:40] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:40,736 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:40] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:40,782 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:40] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:41,123 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:41] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:48:41,170 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:41] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:48:47,683 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:47] "[33mGET /uploads/malicious.png HTTP/1.1[0m" 404 -
+2025-06-28 12:48:56,422 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:48:56] "[33mGET /uploads/logs.txt HTTP/1.1[0m" 404 -
+2025-06-28 12:49:41,602 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:49:41] "GET /uploads/code HTTP/1.1" 200 -
+2025-06-28 12:49:41,653 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:49:41] "[36mGET /static/js/password.js HTTP/1.1[0m" 304 -
+2025-06-28 12:49:47,629 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:49:47] "[31m[1mGET /uploads/code?file=sample.pdf HTTP/1.1[0m" 401 -
+2025-06-28 12:49:52,046 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:49:52] "[32mGET /admin-dashboard HTTP/1.1[0m" 302 -
+2025-06-28 12:49:52,068 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:49:52] "GET /login HTTP/1.1" 200 -
+2025-06-28 12:49:59,463 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:49:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-28 12:49:59,565 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:49:59] "GET /dashboard HTTP/1.1" 200 -
+2025-06-28 12:50:02,578 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:50:02] "GET /uploads/code?file=sample.pdf HTTP/1.1" 200 -
+2025-06-28 12:50:15,135 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:50:15] "GET /uploads/code?file=../app.py HTTP/1.1" 200 -
+2025-06-28 12:51:19,077 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:51:20,333 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:51:20,344 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:51:22,205 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:51:22] "GET /uploads/code?file=../app.py HTTP/1.1" 200 -
+2025-06-28 12:53:26,991 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:53:30,096 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:53:30,113 - werkzeug - INFO -  * Debugger PIN: 145-442-464
+2025-06-28 12:53:30,260 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:53:30] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-28 12:53:30,291 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:53:30] "GET /login HTTP/1.1" 200 -
+2025-06-28 12:53:33,542 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:53:33] "[31m[1mGET /uploads/code?file=../app.py HTTP/1.1[0m" 401 -
+2025-06-28 12:53:46,680 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:53:46] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-28 12:53:46,813 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:53:46] "GET /dashboard HTTP/1.1" 200 -
+2025-06-28 12:53:49,050 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:53:49] "GET /uploads/code?file=../app.py HTTP/1.1" 200 -
+2025-06-28 12:55:22,585 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:55:22] "GET /uploads/code?file=../.gitattributes HTTP/1.1" 200 -
+2025-06-28 12:55:51,409 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:55:51] "[35m[1mGET /uploads/code?file=../.gi HTTP/1.1[0m" 500 -
+2025-06-28 12:55:54,343 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:55:54] "GET /uploads/code?file=../.gitattributes HTTP/1.1" 200 -
+2025-06-28 12:55:57,809 - werkzeug - INFO - 127.0.0.1 - - [28/Jun/2025 12:55:57] "[35m[1mGET /uploads/code?file=../.git HTTP/1.1[0m" 500 -
+2025-06-28 12:56:19,805 - werkzeug - INFO -  * Detected change in 'D:\\Github\\Knowledge-Sharing-Slot-Booking-App\\app.py', reloading
+2025-06-28 12:56:20,502 - werkzeug - WARNING -  * Debugger is active!
+2025-06-28 12:56:20,513 - werkzeug - INFO -  * Debugger PIN: 145-442-464
