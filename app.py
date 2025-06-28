@@ -213,6 +213,7 @@ def signup():
 @app.route('/forgot-password', methods=['GET', 'POST'])
 def forgot_password():
     message = None
+    email = request.args.get('email', '')  # Get email from query parameter for XSS
     if request.method == 'POST':
         email = request.form['email']
         db = get_db()
@@ -225,10 +226,12 @@ def forgot_password():
             reset_url = url_for('reset_password', token=token, _external=True)
             with open('uploads/logs3.txt', 'a') as log_file:
                 log_file.write(f"Password reset link for {email}: {reset_url}\n")
-            message = 'A password reset link has been generated. Since Mail adapter is not configured it is saved to logs.'
+            flash(f'A password reset link has been generated for {email}. Since Mail adapter is not configured it is saved to logs.')
         else:
-            message = 'If the email exists, a reset link will be sent.'
-    return render_template('forgot_password.html', message=message)
+            flash(f'If the email {email} exists, a reset link will be sent.')
+        # Redirect back to the same page with email parameter in URL
+        return redirect(f'/forgot-password?email={urllib.parse.quote(email)}')
+    return render_template('forgot_password.html', message=message, email=email)
 
 @app.route('/reset-password/<token>', methods=['GET', 'POST'])
 def reset_password(token):
