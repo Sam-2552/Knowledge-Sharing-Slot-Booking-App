@@ -120,7 +120,7 @@ def login():
         if user:
             token = jwt.encode({
                 'email': email,
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=24)
             }, app.config['SECRET_KEY'], algorithm="HS256")
             resp = make_response(redirect(url_for('dashboard')))
             resp.set_cookie('token', token)
@@ -224,12 +224,12 @@ def forgot_password():
         if user:
             token = jwt.encode({
                 'email': email,
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=15)
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=60)
             }, app.config['SECRET_KEY'], algorithm="HS256")
             reset_url = url_for('reset_password', token=token, _external=True)
             with open('uploads/logs3.txt', 'a') as log_file:
                 log_file.write(f"Password reset link for {email}: {reset_url}\n")
-            flash(f'A password reset link has been generated for {email}. Contact admin@example.com to fetch from logs.')
+            flash(f'A password reset link has been generated for {email} valid for 5 mins. Contact admin@example.com to fetch from logs.')
         else:
             flash(f'If the email {email} exists, a reset link will be sent.')
         # Redirect back to the same page with email parameter in URL
