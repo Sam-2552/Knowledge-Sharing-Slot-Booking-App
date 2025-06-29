@@ -14,7 +14,7 @@ import random
 import base64
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'a23hd*#8234sDAk)'
+app.config['SECRET_KEY'] = 'lucky-guess'
 app.config['DATABASE'] = 'users.db'
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
