@@ -37,6 +37,8 @@ def create_app(config_overrides=None):
     from .admin.routes import bp as admin_bp
     from .admin.health import bp as admin_health_bp
     from .admin.export import bp as admin_export_bp
+    from .directory.routes import bp as directory_bp
+    from .comments.routes import bp as comments_bp
     from .uploads.routes import bp as uploads_bp
     from .internal.routes import bp as internal_bp
     from .profile.routes import bp as profile_bp
@@ -50,6 +52,8 @@ def create_app(config_overrides=None):
     app.register_blueprint(admin_bp)
     app.register_blueprint(admin_health_bp)
     app.register_blueprint(admin_export_bp)
+    app.register_blueprint(directory_bp)
+    app.register_blueprint(comments_bp)
     app.register_blueprint(uploads_bp)
     app.register_blueprint(internal_bp)
     app.register_blueprint(profile_bp)

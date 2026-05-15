@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <email>alice@ksp.local</email>
+        <name>Alice Wang</name>
+        <manager>diane@ksp.local</manager>
+        <team>engineers</team>
+    </user>
+    <user>
+        <email>bob@ksp.local</email>
+        <name>Bob Mendoza</name>
+        <manager>diane@ksp.local</manager>
+        <team>engineers</team>
+    </user>
+    <user>
+        <email>charlie@ksp.local</email>
+        <name>Charlie Brooks</name>
+        <manager>erin@ksp.local</manager>
+        <team>marketing</team>
+    </user>
+    <user>
+        <email>diane@ksp.local</email>
+        <name>Diane Park</name>
+        <manager>erin@ksp.local</manager>
+        <team>engineering-lead</team>
+    </user>
+    <user>
+        <email>erin@ksp.local</email>
+        <name>Erin Tanaka</name>
+        <manager>cto@ksp.local</manager>
+        <team>vp-engineering</team>
+    </user>
+</users>
