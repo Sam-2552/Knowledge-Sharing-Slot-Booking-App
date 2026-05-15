@@ -33,9 +33,6 @@ uploads/logs*.txt
 *.swo
 .DS_Store
 
-# internal maintainer notes — not for distribution
-_solutions/
-
 # coverage / test artefacts
 .coverage
 htmlcov/
