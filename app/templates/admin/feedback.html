@@ -11,9 +11,6 @@
         <div class="card mx-auto" style="max-width: 500px;">
             <div class="card-body">
                 <h4 class="card-title mb-3">Add Feedback & Points</h4>
-                <div class="alert alert-warning" role="alert">
-                    <strong>Note:</strong> Once submitted, feedback and points cannot be changed. Please confirm before proceeding.
-                </div>
                 <div class="mb-3">
                     <strong>Topic:</strong> {{ activity['topic'] or '-' }}<br>
                     <strong>Agenda:</strong> {{ activity['agenda'] or '-' }}<br>
@@ -22,11 +19,11 @@
                 <form method="POST">
                     <div class="mb-3">
                         <label for="feedback" class="form-label">Feedback <span class="text-danger">*</span></label>
-                        <textarea name="feedback" id="feedback" class="form-control" rows="3" required></textarea>
+                        <textarea name="feedback" id="feedback" class="form-control" rows="3" required>{{ activity['feedback'] or '' }}</textarea>
                     </div>
                     <div class="mb-3">
                         <label for="points" class="form-label">Points <span class="text-danger">*</span></label>
-                        <input type="number" name="points" id="points" class="form-control" min="0" required>
+                        <input type="number" name="points" id="points" class="form-control" value="{{ activity['points_awarded'] if activity['points_awarded'] is not none else '' }}" required>
                     </div>
                     <button type="submit" class="btn btn-success w-100">Submit</button>
                 </form>

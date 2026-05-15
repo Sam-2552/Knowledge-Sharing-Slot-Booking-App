@@ -64,3 +64,23 @@
 2026-05-15 12:44:51,263 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 169.254.169.254:80
 2026-05-15 12:44:51,265 - urllib3.connectionpool - DEBUG - http://169.254.169.254:80 "GET / HTTP/1.1" 403 45
 2026-05-15 12:44:51,266 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:51] "POST /admin/health/url-check HTTP/1.1" 200 -
+2026-05-15 12:45:56,866 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/__init__.py', reloading
+2026-05-15 12:45:56,950 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:45:57,373 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:45:57,374 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:45:58,396 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/__init__.py', reloading
+2026-05-15 12:45:58,478 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:45:58,865 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:45:58,866 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:46:13,975 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:46:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-05-15 12:46:13,998 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:46:13] "[32mPOST /admin/slots/import HTTP/1.1[0m" 302 -
+2026-05-15 12:46:14,040 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:46:14] "POST /admin/slots/preview HTTP/1.1" 200 -
+2026-05-15 12:46:14,062 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:46:14] "POST /admin/slots/preview HTTP/1.1" 200 -
+2026-05-15 12:46:31,146 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/__init__.py', reloading
+2026-05-15 12:46:31,241 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:46:31,647 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:46:31,648 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:46:32,671 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/__init__.py', reloading
+2026-05-15 12:46:32,776 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:46:33,215 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:46:33,216 - werkzeug - INFO -  * Debugger PIN: 518-129-136

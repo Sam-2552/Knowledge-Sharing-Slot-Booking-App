@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Import Schedule | Knowledge Sharing Portal{% endblock %}
+
+{% block tabs %}
+<div class="container mt-3">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link" href="/admin-dashboard">Slots</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/admin/slots/import">Import</a></li>
+        <li class="nav-item"><a class="nav-link" href="/admin/slots/preview">Preview</a></li>
+        <li class="nav-item"><a class="nav-link" href="/admin/health">Health</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<h3 class="mb-3">Bulk schedule import</h3>
+<div class="card shadow-sm">
+    <div class="card-body">
+        <p class="text-muted small">
+            Upload an XML file matching the team planning tool's export format. Each
+            <code>&lt;slot&gt;</code> element should contain
+            <code>&lt;date&gt;</code>, <code>&lt;time&gt;</code>, <code>&lt;topic&gt;</code>,
+            and <code>&lt;agenda&gt;</code>.
+        </p>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="schedule" accept=".xml" class="form-control mb-3" required>
+            <button class="btn btn-success">Import</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

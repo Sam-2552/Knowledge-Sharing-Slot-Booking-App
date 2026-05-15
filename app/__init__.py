@@ -33,8 +33,10 @@ def create_app(config_overrides=None):
     from .auth.oauth import bp as oauth_bp
     from .auth.magic_link import bp as magic_link_bp
     from .slots.routes import bp as slots_bp
+    from .slots.xml_import import bp as slots_admin_bp
     from .admin.routes import bp as admin_bp
     from .admin.health import bp as admin_health_bp
+    from .admin.export import bp as admin_export_bp
     from .uploads.routes import bp as uploads_bp
     from .internal.routes import bp as internal_bp
     from .profile.routes import bp as profile_bp
@@ -44,8 +46,10 @@ def create_app(config_overrides=None):
     app.register_blueprint(oauth_bp)
     app.register_blueprint(magic_link_bp)
     app.register_blueprint(slots_bp)
+    app.register_blueprint(slots_admin_bp)
     app.register_blueprint(admin_bp)
     app.register_blueprint(admin_health_bp)
+    app.register_blueprint(admin_export_bp)
     app.register_blueprint(uploads_bp)
     app.register_blueprint(internal_bp)
     app.register_blueprint(profile_bp)

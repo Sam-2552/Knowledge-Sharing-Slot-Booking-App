@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Topic Preview | Knowledge Sharing Portal{% endblock %}
+
+{% block tabs %}
+<div class="container mt-3">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link" href="/admin-dashboard">Slots</a></li>
+        <li class="nav-item"><a class="nav-link" href="/admin/slots/import">Import</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/admin/slots/preview">Preview</a></li>
+        <li class="nav-item"><a class="nav-link" href="/admin/health">Health</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<h3 class="mb-3">Topic preview</h3>
+<p class="text-muted small">
+    Try out how a topic with inline variables (e.g. <code>Intro by {{ '{{ presenter.name }}' }}</code>)
+    will render in the weekly digest.
+</p>
+<form method="POST">
+    <textarea name="topic" rows="3" class="form-control mb-3" placeholder="Topic with optional {{ '{{ vars }}' }}">{{ topic }}</textarea>
+    <button class="btn btn-outline-primary">Preview</button>
+</form>
+{% if rendered is not none %}
+<div class="mt-4 card">
+    <div class="card-body">
+        <h6 class="text-muted small">Rendered</h6>
+        <div class="border rounded p-3 bg-light">{{ rendered }}</div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
