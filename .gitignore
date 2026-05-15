@@ -1,0 +1,45 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# virtualenvs
+venv/
+env/
+.venv/
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# sqlite
+*.db
+*.sqlite
+*.sqlite3
+
+# logs
+*.log
+uploads/logs*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# internal maintainer notes — not for distribution
+_solutions/
+
+# coverage / test artefacts
+.coverage
+htmlcov/
+.pytest_cache/
+
+# docker
+docker/data/
