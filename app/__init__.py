@@ -1,6 +1,6 @@
 import os
 import logging
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, request
 
 from .config import load_config
 from .db import init_sqlite, close_sqlite
@@ -33,12 +33,29 @@ def create_app(config_overrides=None):
     from .admin.routes import bp as admin_bp
     from .uploads.routes import bp as uploads_bp
     from .internal.routes import bp as internal_bp
+    from .profile.routes import bp as profile_bp
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(slots_bp)
     app.register_blueprint(admin_bp)
     app.register_blueprint(uploads_bp)
     app.register_blueprint(internal_bp)
+    app.register_blueprint(profile_bp)
+
+    @app.after_request
+    def _api_cors(response):
+        if request.path.startswith("/api/"):
+            origin = request.headers.get("Origin")
+            if origin:
+                response.headers["Access-Control-Allow-Origin"] = origin
+                response.headers["Access-Control-Allow-Credentials"] = "true"
+                response.headers["Access-Control-Allow-Methods"] = (
+                    "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+                )
+                response.headers["Access-Control-Allow-Headers"] = (
+                    "Content-Type, Authorization"
+                )
+        return response
 
     @app.route("/")
     def home():

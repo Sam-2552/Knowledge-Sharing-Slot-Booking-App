@@ -1,0 +1,11 @@
+2026-05-15 12:39:10,755 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.0.2.2:5000
+2026-05-15 12:39:10,755 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-05-15 12:39:10,757 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:39:10,987 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:39:10,988 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:39:12,512 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:39:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-05-15 12:39:12,539 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:39:12] "GET /profile HTTP/1.1" 200 -
+2026-05-15 12:39:12,577 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:39:12] "PATCH /api/profile HTTP/1.1" 200 -

@@ -23,9 +23,28 @@ def init_sqlite():
             name TEXT NOT NULL,
             email TEXT UNIQUE NOT NULL,
             password TEXT NOT NULL,
-            role TEXT NOT NULL DEFAULT 'user'
+            role TEXT NOT NULL DEFAULT 'user',
+            bio TEXT,
+            avatar TEXT,
+            preferences TEXT,
+            email_verified INTEGER NOT NULL DEFAULT 0,
+            points INTEGER NOT NULL DEFAULT 0,
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
         )"""
     )
+    # Older deployments predate the profile fields; back-fill silently.
+    for column, ddl in (
+        ("bio", "ALTER TABLE users ADD COLUMN bio TEXT"),
+        ("avatar", "ALTER TABLE users ADD COLUMN avatar TEXT"),
+        ("preferences", "ALTER TABLE users ADD COLUMN preferences TEXT"),
+        ("email_verified", "ALTER TABLE users ADD COLUMN email_verified INTEGER NOT NULL DEFAULT 0"),
+        ("points", "ALTER TABLE users ADD COLUMN points INTEGER NOT NULL DEFAULT 0"),
+        ("created_at", "ALTER TABLE users ADD COLUMN created_at TEXT"),
+    ):
+        try:
+            db.execute(ddl)
+        except Exception:
+            pass
     db.execute(
         """CREATE TABLE IF NOT EXISTS slots (
             id INTEGER PRIMARY KEY AUTOINCREMENT,

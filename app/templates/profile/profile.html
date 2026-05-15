@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Profile | Knowledge Sharing Portal{% endblock %}
+
+{% block tabs %}
+<div class="container mt-3">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="/my-activity">My Activity</a></li>
+        <li class="nav-item"><a class="nav-link" href="/leaderboard">Leaderboard</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/profile">Profile</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-7">
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h3 class="mb-3">Profile</h3>
+                <form method="POST" action="/profile">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" value="{{ user['name'] }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" value="{{ user['email'] }}" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Bio</label>
+                        <textarea name="bio" class="form-control" rows="3">{{ user['bio'] or '' }}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Save</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5>Avatar</h5>
+                {% if user['avatar'] %}
+                    <img src="/profile/avatar/{{ user['avatar'].split('/')[-1] }}" alt="avatar"
+                         class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                {% endif %}
+                <form method="POST" action="/profile/avatar" enctype="multipart/form-data">
+                    <input type="file" name="avatar" accept="image/*" class="form-control mb-2">
+                    <button type="submit" class="btn btn-outline-primary btn-sm">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5>Preferences</h5>
+                <pre class="bg-light p-2 rounded small">{{ preferences|tojson(indent=2) }}</pre>
+                <p class="text-muted small mb-2">
+                    Edit preferences from the settings tray or import a previously exported bundle.
+                </p>
+                <form method="POST" action="/profile/preferences/import" enctype="multipart/form-data">
+                    <input type="file" name="preferences" accept=".yaml,.yml" class="form-control form-control-sm mb-2">
+                    <button type="submit" class="btn btn-outline-secondary btn-sm">Import preferences</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
