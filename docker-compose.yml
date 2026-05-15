@@ -63,6 +63,18 @@ services:
     networks:
       - ksp-net
 
+  imds:
+    image: python:3.11-slim
+    container_name: ksp-imds
+    command: ["python", "/opt/imds/server.py"]
+    volumes:
+      - ./docker/imds:/opt/imds:ro
+    networks:
+      ksp-net:
+        aliases:
+          - 169.254.169.254
+          - metadata.internal
+
 volumes:
   app-instance:
   app-uploads:

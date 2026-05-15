@@ -44,3 +44,23 @@
 2026-05-15 12:42:56,355 - werkzeug - WARNING -  * Debugger is active!
 2026-05-15 12:42:56,355 - werkzeug - INFO -  * Debugger PIN: 518-129-136
 2026-05-15 12:42:57,445 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:42:57] "[32mPOST /login?next=//evil.com/pwn HTTP/1.1[0m" 302 -
+2026-05-15 12:44:15,034 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/__init__.py', reloading
+2026-05-15 12:44:15,120 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:44:15,525 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:44:15,526 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:44:16,547 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/__init__.py', reloading
+2026-05-15 12:44:16,628 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:44:17,011 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:44:17,012 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:44:33,237 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-05-15 12:44:33,255 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:33] "GET /admin/health HTTP/1.1" 200 -
+2026-05-15 12:44:33,267 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:33] "POST /admin/health/ping HTTP/1.1" 200 -
+2026-05-15 12:44:33,278 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:33] "POST /admin/health/url-check HTTP/1.1" 200 -
+2026-05-15 12:44:33,292 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 169.254.169.254:80
+2026-05-15 12:44:33,295 - urllib3.connectionpool - DEBUG - http://169.254.169.254:80 "GET / HTTP/1.1" 403 45
+2026-05-15 12:44:33,296 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:33] "POST /admin/health/url-check HTTP/1.1" 200 -
+2026-05-15 12:44:51,224 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-05-15 12:44:51,240 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:51] "POST /admin/health/url-check HTTP/1.1" 200 -
+2026-05-15 12:44:51,263 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 169.254.169.254:80
+2026-05-15 12:44:51,265 - urllib3.connectionpool - DEBUG - http://169.254.169.254:80 "GET / HTTP/1.1" 403 45
+2026-05-15 12:44:51,266 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:44:51] "POST /admin/health/url-check HTTP/1.1" 200 -

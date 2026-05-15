@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Health Console | Knowledge Sharing Portal{% endblock %}
+
+{% block tabs %}
+<div class="container mt-3">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link" href="/admin-dashboard">Slots</a></li>
+        <li class="nav-item"><a class="nav-link" href="/my-activity">Activity</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/admin/health">Health</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<h3 class="mb-3">Infrastructure health</h3>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+            <div class="card-body">
+                <h6>Ping a host</h6>
+                <form method="POST" action="/admin/health/ping" class="d-flex gap-2">
+                    <input type="text" name="host" placeholder="e.g. mongo or 10.0.0.5" class="form-control" required>
+                    <button class="btn btn-outline-primary">Ping</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+            <div class="card-body">
+                <h6>URL reachability</h6>
+                <form method="POST" action="/admin/health/url-check" class="d-flex gap-2">
+                    <input type="text" name="url" placeholder="https://example.com/healthz" class="form-control" required>
+                    <button class="btn btn-outline-primary">Check</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% if result %}
+<div class="card mt-3">
+    <div class="card-body">
+        <h6 class="text-muted small">Output</h6>
+        <pre class="bg-light p-3 rounded small mb-0">{{ result }}</pre>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
