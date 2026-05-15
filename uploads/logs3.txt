@@ -9,3 +9,17 @@
 2026-05-15 12:39:12,512 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:39:12] "[32mPOST /login HTTP/1.1[0m" 302 -
 2026-05-15 12:39:12,539 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:39:12] "GET /profile HTTP/1.1" 200 -
 2026-05-15 12:39:12,577 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:39:12] "PATCH /api/profile HTTP/1.1" 200 -
+2026-05-15 12:40:52,793 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/auth/routes.py', reloading
+2026-05-15 12:40:52,843 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:40:53,126 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:40:53,127 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:40:57,174 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/auth/routes.py', reloading
+2026-05-15 12:40:57,220 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:40:57,427 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:40:57,427 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:41:02,482 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/auth/routes.py', reloading
+2026-05-15 12:41:02,531 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:41:02,733 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:41:02,733 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:41:10,813 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/__init__.py', reloading
+2026-05-15 12:41:10,862 - werkzeug - INFO -  * Restarting with stat

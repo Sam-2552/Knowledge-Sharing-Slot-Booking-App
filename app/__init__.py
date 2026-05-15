@@ -29,6 +29,8 @@ def create_app(config_overrides=None):
         init_sqlite()
 
     from .auth.routes import bp as auth_bp
+    from .auth.oauth import bp as oauth_bp
+    from .auth.magic_link import bp as magic_link_bp
     from .slots.routes import bp as slots_bp
     from .admin.routes import bp as admin_bp
     from .uploads.routes import bp as uploads_bp
@@ -36,6 +38,8 @@ def create_app(config_overrides=None):
     from .profile.routes import bp as profile_bp
 
     app.register_blueprint(auth_bp)
+    app.register_blueprint(oauth_bp)
+    app.register_blueprint(magic_link_bp)
     app.register_blueprint(slots_bp)
     app.register_blueprint(admin_bp)
     app.register_blueprint(uploads_bp)

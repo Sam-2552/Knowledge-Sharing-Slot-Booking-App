@@ -14,6 +14,8 @@ from flask import (
 )
 
 from ..db import get_db
+from ..utils.mail import send_mail
+from ..utils.redirects import is_safe_next
 from .passwords import verify_password, hash_password
 from .tokens import issue_token, decode_token
 
@@ -23,6 +25,7 @@ bp = Blueprint("auth", __name__)
 @bp.route("/login", methods=["GET", "POST"])
 def login():
     error = None
+    next_url = request.values.get("next", "")
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
@@ -30,11 +33,14 @@ def login():
         user = db.execute("SELECT * FROM users WHERE email = ?", (email,)).fetchone()
         if user and verify_password(password, user["password"]):
             token = issue_token(email)
-            resp = make_response(redirect(url_for("slots.dashboard")))
+            destination = next_url if is_safe_next(next_url) else url_for(
+                "slots.dashboard"
+            )
+            resp = make_response(redirect(destination))
             resp.set_cookie("token", token)
             return resp
         error = "Invalid Credentials. Please try again."
-    return render_template("auth/login.html", error=error)
+    return render_template("auth/login.html", error=error, next=next_url)
 
 
 @bp.route("/logout")
@@ -83,13 +89,27 @@ def forgot_password():
                 current_app.config["SECRET_KEY"],
                 algorithm="HS256",
             )
-            reset_url = url_for("auth.reset_password", token=token, _external=True)
-            with open(
-                f"{current_app.config['UPLOAD_DIR']}/logs3.txt", "a"
-            ) as log_file:
-                log_file.write(f"Password reset link for {email}: {reset_url}\n")
+            host = request.headers.get("X-Forwarded-Host") or request.host
+            scheme = request.headers.get("X-Forwarded-Proto", "http")
+            reset_url = f"{scheme}://{host}/reset-password/{token}"
+            try:
+                send_mail(
+                    email,
+                    "Password reset request",
+                    f"Use this link to reset your password (valid 60 minutes):\n\n{reset_url}",
+                )
+            except Exception as exc:
+                current_app.logger.warning(
+                    "Reset mail delivery failed for %s: %s", email, exc
+                )
+                with open(
+                    f"{current_app.config['UPLOAD_DIR']}/logs3.txt", "a"
+                ) as log_file:
+                    log_file.write(
+                        f"Password reset link for {email}: {reset_url}\n"
+                    )
             flash(
-                f"A password reset link has been generated for {email} valid for 5 mins. Contact admin@example.com to fetch from logs."
+                f"A password reset link has been emailed to {email}. The link is valid for 60 minutes."
             )
         else:
             flash(f"If the email {email} exists, a reset link will be sent.")

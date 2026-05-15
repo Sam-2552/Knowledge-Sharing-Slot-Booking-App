@@ -22,6 +22,7 @@
                         </div>
                         {% endif %}
                         <form method="POST" action="/login">
+                            <input type="hidden" name="next" value="{{ next or '' }}">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email address</label>
                                 <input type="email" class="form-control" id="email" name="email" required autofocus>
@@ -37,6 +38,11 @@
                                 <button type="submit" class="btn btn-success">Login</button>
                             </div>
                         </form>
+                        <hr class="my-3">
+                        <div class="d-grid gap-2">
+                            <a href="/auth/oauth/login" class="btn btn-outline-primary">Sign in with corporate SSO</a>
+                            <a href="/auth/magic-link" class="btn btn-outline-secondary btn-sm">Email me a sign-in link</a>
+                        </div>
                         <div class="mt-3 text-center">
                             <span>Don't have an account?</span>
                             <a href="/signup">Sign Up</a>
