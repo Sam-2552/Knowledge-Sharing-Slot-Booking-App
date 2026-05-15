@@ -111,3 +111,7 @@
 2026-05-15 12:50:12,271 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:50:12] "GET /page?name=../../../config.py HTTP/1.1" 200 -
 2026-05-15 12:50:12,286 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:50:12] "GET /about HTTP/1.1" 200 -
 2026-05-15 12:50:12,287 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:50:12] "GET /page?name=http://127.0.0.1:5000/about HTTP/1.1" 200 -
+2026-05-15 12:50:46,050 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/slots/routes.py', reloading
+2026-05-15 12:50:46,166 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:50:46,653 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:50:46,654 - werkzeug - INFO -  * Debugger PIN: 518-129-136

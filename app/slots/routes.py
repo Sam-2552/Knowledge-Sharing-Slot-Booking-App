@@ -226,6 +226,52 @@ def my_activity():
     )
 
 
+@bp.route("/slots/<int:slot_id>/edit", methods=["GET", "POST"])
+@token_required
+def edit_slot(slot_id):
+    db = get_db()
+    user = db.execute("SELECT * FROM users WHERE email = ?", (g.user,)).fetchone()
+    slot = db.execute("SELECT * FROM slots WHERE id = ?", (slot_id,)).fetchone()
+    if not slot:
+        flash("Slot not found.")
+        return redirect(url_for("slots.dashboard"))
+    if request.method == "POST":
+        topic = request.form.get("topic") or slot["topic"]
+        agenda = request.form.get("agenda") or slot["agenda"]
+        link = request.form.get("link") or slot["link"]
+        db.execute(
+            "UPDATE slots SET topic = ?, agenda = ?, link = ? WHERE id = ?",
+            (topic, agenda, link, slot_id),
+        )
+        db.execute(
+            "UPDATE slot_activity SET topic = ?, agenda = ?, link = ?, updated_at = CURRENT_TIMESTAMP WHERE slot_id = ? AND user_id = ?",
+            (topic, agenda, link, slot_id, slot["presenter_id"]),
+        )
+        db.commit()
+        flash("Slot updated.")
+        return redirect(url_for("slots.dashboard"))
+    return render_template("slots/edit.html", slot=slot, user=user)
+
+
+@bp.route("/slots/<int:slot_id>/cancel", methods=["POST"])
+@token_required
+def cancel_slot(slot_id):
+    db = get_db()
+    slot = db.execute("SELECT * FROM slots WHERE id = ?", (slot_id,)).fetchone()
+    if not slot:
+        flash("Slot not found.")
+        return redirect(url_for("slots.dashboard"))
+    db.execute(
+        "UPDATE slots SET topic = NULL, agenda = NULL, presenter_id = NULL, "
+        "presenter_name = NULL, status = 'available', approved_by_id = NULL, "
+        "approved_by_name = NULL, file_path = NULL, link = NULL WHERE id = ?",
+        (slot_id,),
+    )
+    db.commit()
+    flash("Booking cancelled.")
+    return redirect(url_for("slots.dashboard"))
+
+
 @bp.route("/leaderboard")
 @token_required
 def leaderboard():
