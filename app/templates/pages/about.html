@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}About | Knowledge Sharing Portal{% endblock %}
+
+{% block head_extra %}
+<link rel="canonical" href="https://{{ canonical_host }}/about">
+<meta property="og:url" content="https://{{ canonical_host }}/about">
+{% endblock %}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">Knowledge Sharing Portal</a>
+        <div class="d-flex gap-2">
+            <a href="/about" class="btn btn-link">About</a>
+            <a href="/team" class="btn btn-link">Team</a>
+            <a href="/help" class="btn btn-link">Help</a>
+            <a href="/login" class="btn btn-outline-primary">Sign in</a>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1 class="mt-4">About the Portal</h1>
+<p class="lead">
+    The Knowledge Sharing Portal helps engineering teams run weekly knowledge
+    sharing sessions. Engineers book slots, share materials, and earn points
+    that feed the quarterly leaderboard.
+</p>
+<p>
+    The portal has been an internal tool since late 2025 and now supports
+    around 300 sessions per quarter across our European offices.
+</p>
+{% endblock %}

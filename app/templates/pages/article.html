@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Help article | Knowledge Sharing Portal{% endblock %}
+
+{% block head_extra %}
+<link rel="canonical" href="https://{{ canonical_host }}{{ request.full_path }}">
+{% endblock %}
+
+{% block nav %}{% include "pages/_marketing_nav.html" %}{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm mt-3">
+    <div class="card-body">
+        {{ body | safe }}
+    </div>
+</div>
+{% endblock %}

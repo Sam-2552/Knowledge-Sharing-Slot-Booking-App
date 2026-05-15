@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Help | Knowledge Sharing Portal{% endblock %}
+
+{% block head_extra %}
+<link rel="canonical" href="https://{{ canonical_host }}/help">
+{% endblock %}
+
+{% block nav %}{% include "pages/_marketing_nav.html" %}{% endblock %}
+
+{% block content %}
+<h1 class="mt-4">Help &amp; FAQs</h1>
+<p>Browse the help articles to learn how to make the most of the portal.</p>
+<ul>
+    <li><a href="/page?name=welcome">Getting started</a></li>
+    <li><a href="/page?name=booking">How to book a slot</a></li>
+    <li><a href="/page?name=feedback">Understanding feedback and points</a></li>
+</ul>
+{% endblock %}

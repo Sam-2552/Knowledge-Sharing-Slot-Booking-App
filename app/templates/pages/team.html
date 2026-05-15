@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Team | Knowledge Sharing Portal{% endblock %}
+
+{% block head_extra %}
+<link rel="canonical" href="https://{{ canonical_host }}/team">
+{% endblock %}
+
+{% block nav %}{% include "pages/_marketing_nav.html" %}{% endblock %}
+
+{% block content %}
+<h1 class="mt-4">The team behind the portal</h1>
+<p>
+    A small platform crew maintains the portal alongside the broader internal
+    tools group. We accept contributions from anyone who's run a session.
+</p>
+<ul>
+    <li>Diane Park — engineering lead</li>
+    <li>Alice Wang — back-end</li>
+    <li>Bob Mendoza — front-end</li>
+    <li>Charlie Brooks — design</li>
+</ul>
+{% endblock %}
