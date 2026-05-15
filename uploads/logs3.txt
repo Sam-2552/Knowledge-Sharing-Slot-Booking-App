@@ -23,3 +23,24 @@
 2026-05-15 12:41:02,733 - werkzeug - INFO -  * Debugger PIN: 518-129-136
 2026-05-15 12:41:10,813 - werkzeug - INFO -  * Detected change in '/home/user/Knowledge-Sharing-Slot-Booking-App/app/__init__.py', reloading
 2026-05-15 12:41:10,862 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:42:28,391 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.0.2.2:5000
+2026-05-15 12:42:28,392 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-05-15 12:42:28,392 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:42:28,803 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:42:28,803 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:42:29,994 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:42:29] "GET /profile HTTP/1.1" 200 -
+2026-05-15 12:42:30,015 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:42:30] "GET /api/users/1 HTTP/1.1" 200 -
+2026-05-15 12:42:30,025 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:42:30] "[32mGET /api/v1/users/1 HTTP/1.1[0m" 302 -
+2026-05-15 12:42:30,036 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:42:30] "[32mPOST /login?next=//evil.com/pwn HTTP/1.1[0m" 302 -
+2026-05-15 12:42:55,840 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.0.2.2:5000
+2026-05-15 12:42:55,840 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-05-15 12:42:55,840 - werkzeug - INFO -  * Restarting with stat
+2026-05-15 12:42:56,355 - werkzeug - WARNING -  * Debugger is active!
+2026-05-15 12:42:56,355 - werkzeug - INFO -  * Debugger PIN: 518-129-136
+2026-05-15 12:42:57,445 - werkzeug - INFO - 127.0.0.1 - - [15/May/2026 12:42:57] "[32mPOST /login?next=//evil.com/pwn HTTP/1.1[0m" 302 -

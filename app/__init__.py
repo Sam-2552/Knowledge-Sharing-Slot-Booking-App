@@ -28,6 +28,7 @@ def create_app(config_overrides=None):
     with app.app_context():
         init_sqlite()
 
+    from .api.routes import bp as api_bp
     from .auth.routes import bp as auth_bp
     from .auth.oauth import bp as oauth_bp
     from .auth.magic_link import bp as magic_link_bp
@@ -37,6 +38,7 @@ def create_app(config_overrides=None):
     from .internal.routes import bp as internal_bp
     from .profile.routes import bp as profile_bp
 
+    app.register_blueprint(api_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(oauth_bp)
     app.register_blueprint(magic_link_bp)

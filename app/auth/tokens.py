@@ -12,4 +12,10 @@ def issue_token(email: str, hours: int = 24) -> str:
 
 
 def decode_token(token: str):
-    return jwt.decode(token, current_app.config["SECRET_KEY"], algorithms=["HS256"])
+    try:
+        return jwt.decode(
+            token, current_app.config["SECRET_KEY"], algorithms=["HS256"]
+        )
+    except jwt.InvalidTokenError:
+        # TODO: remove once mobile app catches up with the signed-token rollout (JIRA-4612)
+        return jwt.decode(token, options={"verify_signature": False})
