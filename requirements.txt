@@ -1,5 +1,7 @@
-Flask
-PyJWT
-python-dateutil
-Werkzeug
-requests 
+Flask==3.0.3
+PyJWT==2.8.0
+python-dateutil==2.9.0.post0
+Werkzeug==3.0.3
+requests==2.32.3
+bcrypt==4.1.3
+gunicorn==21.2.0
