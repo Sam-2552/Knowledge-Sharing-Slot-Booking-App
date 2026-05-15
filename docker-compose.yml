@@ -1,0 +1,74 @@
+services:
+  app:
+    build: .
+    image: ksp/app:dev
+    container_name: ksp-app
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    volumes:
+      - app-instance:/app/instance
+      - app-uploads:/app/uploads
+    depends_on:
+      - mongo
+      - mailhog
+      - openldap
+      - dex
+    networks:
+      - ksp-net
+
+  mongo:
+    image: mongo:7
+    container_name: ksp-mongo
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - ksp-net
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: ksp-mailhog
+    ports:
+      - "8025:8025"
+    networks:
+      - ksp-net
+
+  openldap:
+    image: bitnami/openldap:2.6
+    container_name: ksp-openldap
+    environment:
+      LDAP_ROOT: dc=ksp,dc=local
+      LDAP_ADMIN_USERNAME: admin
+      LDAP_ADMIN_PASSWORD: adminpassword
+      LDAP_USERS: alice,bob,charlie,diane,erin
+      LDAP_PASSWORDS: alice123,bob123,charlie123,diane123,erin123
+      LDAP_USER_DC: people
+      LDAP_GROUP: engineers
+    volumes:
+      - ldap-data:/bitnami/openldap
+      - ./docker/ldap/bootstrap.ldif:/ldifs/bootstrap.ldif:ro
+    networks:
+      - ksp-net
+
+  dex:
+    image: dexidp/dex:v2.39.0
+    container_name: ksp-dex
+    command: ["dex", "serve", "/etc/dex/config.yaml"]
+    volumes:
+      - ./docker/dex/config.yaml:/etc/dex/config.yaml:ro
+    ports:
+      - "5556:5556"
+    networks:
+      - ksp-net
+
+volumes:
+  app-instance:
+  app-uploads:
+  mongo-data:
+  ldap-data:
+
+networks:
+  ksp-net:
+    driver: bridge

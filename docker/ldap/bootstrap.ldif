@@ -1,0 +1,11 @@
+dn: ou=people,dc=ksp,dc=local
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=engineers,ou=people,dc=ksp,dc=local
+objectClass: organizationalUnit
+ou: engineers
+
+dn: ou=marketing,ou=people,dc=ksp,dc=local
+objectClass: organizationalUnit
+ou: marketing

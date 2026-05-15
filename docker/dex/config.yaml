@@ -1,0 +1,33 @@
+issuer: http://dex:5556/dex
+
+storage:
+  type: sqlite3
+  config:
+    file: /tmp/dex.db
+
+web:
+  http: 0.0.0.0:5556
+
+oauth2:
+  skipApprovalScreen: true
+
+staticClients:
+  - id: ksp-web
+    redirectURIs:
+      - http://localhost:5000/auth/oauth/callback
+    name: 'Knowledge Sharing Portal'
+    secret: ksp-web-secret
+
+enablePasswordDB: true
+
+staticPasswords:
+  - email: "alice@ksp.local"
+    # password: alice123
+    hash: "$2a$10$2b2cu2a3UEhKxq6c1lI93edQX9b7iE3MWxFlR/dB9LquMQzZTqWPe"
+    username: "alice"
+    userID: "alice-uid"
+  - email: "bob@ksp.local"
+    # password: bob123
+    hash: "$2a$10$2b2cu2a3UEhKxq6c1lI93edQX9b7iE3MWxFlR/dB9LquMQzZTqWPe"
+    username: "bob"
+    userID: "bob-uid"
